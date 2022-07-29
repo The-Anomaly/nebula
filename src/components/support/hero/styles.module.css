@@ -1,0 +1,44 @@
+.heroBg {
+  background: var(--blue);
+  color: var(--lightText);
+  padding: 5rem 0;
+}
+.hero {
+  text-align: center;
+}
+.ttl {
+  font-size: 50px;
+  margin-bottom: 2rem;
+}
+.searchWrap {
+  height: 60px;
+  position: relative;
+  max-width: 450px;
+  margin: auto;
+}
+.searchWrap input {
+  background: var(--lightText);
+  border: 1px solid var(--lightText);
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  padding-left: 3.5rem;
+  font-size: 16px;
+  padding-right: 2.5rem;
+}
+.icon1 {
+  position: absolute;
+  left: 1.2rem;
+  top: 18px;
+}
+.icon2 {
+  position: absolute;
+  right: 1rem;
+  top: 20px;
+  width: 18px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.icon2 path {
+  fill: red;
+}

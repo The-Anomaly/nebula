@@ -1,5 +1,5 @@
 import { Layout, LayoutProps } from "components";
-import { Home } from "pages";
+import { Home, Support } from "pages";
 import { RouteProps } from "react-router-dom";
 import { Routes } from "./routes";
 
@@ -29,5 +29,11 @@ export const RouteBuilder: RouteBuilderItem[] = [
     Element: Home,
     Layout: Layout,
     props: { type: "light", active: "home" },
+  },
+  {
+    path: Routes.support,
+    Element: Support,
+    Layout: Layout,
+    props: { type: "dark", active: "support" },
   },
 ];

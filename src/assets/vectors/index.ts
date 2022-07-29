@@ -18,6 +18,8 @@ import { ReactComponent as Portfolio } from "./portfolio.svg";
 import { ReactComponent as Swap } from "./swap.svg";
 import { ReactComponent as ShareCluster } from "./shareCluster.svg";
 import { ReactComponent as NebEllipse } from "./nebEllipse.svg";
+import { ReactComponent as PlusIcon } from "./plusIcon.svg";
+import { ReactComponent as SearchIcon } from "./search.svg";
 
 export {
   LogoWithDarkText,
@@ -40,4 +42,6 @@ export {
   Swap,
   ShareCluster,
   NebEllipse,
+  PlusIcon,
+  SearchIcon,
 };

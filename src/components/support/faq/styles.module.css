@@ -1,0 +1,81 @@
+.faqBg {
+}
+.faq {
+  color: var(--lightText);
+  gap: 2rem;
+  padding-bottom: 4rem;
+  padding-right: 8%;
+}
+.faqCategory {
+  color: var(--secondaryText);
+  font-size: 15px;
+  padding-top: 5rem;
+  position: sticky;
+  top: 0;
+}
+.faqCategory p {
+  margin-bottom: 2.5rem;
+  cursor: pointer;
+}
+.active {
+  color: var(--lightText);
+}
+.faqWrap {
+  margin-left: 300px;
+  position: relative;
+  margin-top: -256px;
+}
+.categoryTtl {
+  font-size: 36px;
+  margin-bottom: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.faqItem {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(72, 73, 77, 0.5);
+  font-size: 19px;
+}
+.activeItem {
+}
+.faqBtn {
+  width: 100%;
+  text-align: left;
+  padding: 0 0 3rem;
+  background: transparent;
+  color: var(--lightText);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+}
+.faqBtn span {
+  width: 80%;
+  line-height: 1.7;
+}
+.faqBody {
+  line-height: 2;
+  width: 87%;
+  overflow: hidden;
+  height: 0;
+  transition: height 0.3s ease-out;
+  color: var(--lightText);
+  font-size: inherit;
+}
+.faqBody > div {
+  padding-bottom: 3rem;
+}
+.activeItem .faqBody {
+  height: auto;
+}
+.inactiveItem .faqBody {
+  animation-name: hideFaq;
+}
+.cancel {
+  transform: rotate(45deg);
+}
+.faqWrap > div {
+  margin-bottom: 7rem;
+}
