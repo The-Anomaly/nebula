@@ -1,8 +1,20 @@
 import * as React from "react";
-import styles from "./styles.module.css";
+import { Features } from "./features";
+import { HeroSection } from "./hero";
+import { MoreFeatures } from "./moreFeatures";
+import { NebAddresses } from "./neb";
+import { Waitlist } from "./waitlist";
 
 const HomeUI = () => {
-  return <>home</>;
+  return (
+    <>
+      <HeroSection />
+      <Features />
+      <MoreFeatures />
+      <NebAddresses />
+      <Waitlist />
+    </>
+  );
 };
 
 export { HomeUI };

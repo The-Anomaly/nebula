@@ -1,0 +1,80 @@
+.nebBg {
+}
+.neb {
+  padding: 2rem 0 0;
+}
+.ttl {
+  margin-bottom: 8rem;
+  text-align: center;
+  color: var(--lightText);
+  font-size: 30px;
+  font-weight: 500;
+}
+.ttl span {
+  color: var(--blue);
+}
+.nebList {
+  position: relative;
+  max-width: 750px;
+  background-image: url("../../../assets/vectors/nebEllipse.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 500px;
+  background-position: top center;
+  margin: auto;
+}
+.nebCard {
+  color: #000000;
+  background: #ffffff;
+  border-radius: 36px;
+  width: fit-content;
+  padding: 10px;
+  font-size: 23px;
+  padding: 12px 1.8rem;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  position: absolute;
+}
+.large {
+  transform: scale(1.25);
+}
+.small {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 11px 1.7rem;
+}
+.nebCard span {
+  color: var(--blue);
+}
+.neb1 {
+  top: 0;
+  left: 10%;
+}
+.neb2 {
+  top: 20px;
+  right: 35%;
+}
+.neb3 {
+  top: 0;
+  right: 8%;
+}
+.neb4 {
+  left: 0;
+  top: 110px;
+}
+.neb5 {
+  left: 35%;
+  top: 150px;
+}
+.neb6 {
+  right: 0;
+  top: 110px;
+}
+.neb7 {
+  left: 15%;
+  top: 260px;
+}
+.neb8 {
+  right: 10%;
+  top: 260px;
+}

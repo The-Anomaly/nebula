@@ -1,0 +1,54 @@
+.waitlistBg {
+  background: var(--blue);
+  padding: 4rem 0;
+  text-align: center;
+  color: var(--lightText);
+}
+.waitlist {
+}
+.ttl {
+  font-size: 36px;
+  margin-bottom: 1rem;
+}
+.txt {
+  font-size: 17px;
+  max-width: 500px;
+  margin: auto;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+.form {
+  height: 50px;
+  width: 400px;
+  margin: auto;
+  font-family: "DM Sans";
+  font-size: 16px;
+  display: flex;
+}
+.input {
+  height: 100%;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border: 1px solid var(--light);
+  padding-left: 1rem;
+  width: calc(100% - 105px);
+  background: var(--light);
+  font-size: 15px;
+}
+.input:focus {
+  border-color: var(--dark);
+}
+.input:focus::placeholder {
+  opacity: 0;
+}
+button.btn {
+  height: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-left: 1.2rem;
+  padding-right: 1.5rem;
+  letter-spacing: 2px;
+  width: 105px;
+}
