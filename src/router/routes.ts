@@ -12,7 +12,7 @@ export const Routes = {
   home: "/",
   about: "/about",
   support: "/support",
-  resource: "/resources",
+  mediaKit: "/media-kit",
   terms: "/terms-of-service",
   privacy: "/privacy",
   wallet: "/wallet/:id",

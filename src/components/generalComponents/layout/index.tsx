@@ -1,16 +1,16 @@
 import * as React from "react";
 import { Footer } from "./footer";
-import { Navbar } from "./navbar";
+import { Navbar, NavbarProps } from "./navbar";
 import styles from "./styles.module.css";
 
-export interface LayoutProps {
-  children: any;
+export interface LayoutProps extends NavbarProps {
+  [key: string]: any;
 }
 
-const Layout = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children, type, active }) => {
   return (
     <>
-      <Navbar />
+      <Navbar type={type} active={active} />
       <main>{children}</main>
       <Footer />
     </>

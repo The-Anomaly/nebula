@@ -1,13 +1,13 @@
-import { Layout } from "components";
+import { Layout, LayoutProps } from "components";
 import { Home } from "pages";
 import { RouteProps } from "react-router-dom";
 import { Routes } from "./routes";
 
 // Route Builder Item Props
 export interface RouteBuilderItem extends RouteProps {
-  Layout?: React.FC<any>; // If you wish to add a layout to the page
+  Layout?: React.FC<LayoutProps>; // If you wish to add a layout to the page
   Element: React.FC;
-  props?: any;
+  props: LayoutProps;
 }
 
 /**
@@ -28,5 +28,6 @@ export const RouteBuilder: RouteBuilderItem[] = [
     path: Routes.home,
     Element: Home,
     Layout: Layout,
-  }
-]
+    props: { type: "light", active: "home" },
+  },
+];

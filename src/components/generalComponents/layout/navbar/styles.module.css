@@ -1,0 +1,42 @@
+.navBg {
+  font-size: 13px;
+}
+.light {
+  background: #f6f6f6;
+}
+.dark {
+  background: var(--dark);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.logo {
+  width: 122px;
+}
+.navItems {
+  color: var(--secondaryText);
+  display: flex;
+  list-style-type: none;
+  width: 360px;
+  display: flex;
+  justify-content: space-between;
+}
+.navItems a {
+  text-decoration: none;
+  color: inherit;
+  letter-spacing: 0.3px;
+}
+.light .activeItem,
+.light .navItems a:hover {
+  color: var(--darkText);
+  font-weight: 500;
+}
+.dark .activeItem,
+.dark .navItems a:hover {
+  color: var(--lightText);
+  font-weight: 500;
+}
