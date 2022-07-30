@@ -1,5 +1,5 @@
 import { Layout, LayoutProps } from "components";
-import { Home, MediaKit, Support } from "pages";
+import { About, Home, MediaKit, Support } from "pages";
 import { RouteProps } from "react-router-dom";
 import { Routes } from "./routes";
 
@@ -41,5 +41,11 @@ export const RouteBuilder: RouteBuilderItem[] = [
     Element: MediaKit,
     Layout: Layout,
     props: { type: "dark", active: "media-kit" },
+  },
+  {
+    path: Routes.about,
+    Element: About,
+    Layout: Layout,
+    props: { type: "dark", active: "about" },
   },
 ];

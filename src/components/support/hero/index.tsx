@@ -5,7 +5,7 @@ import styles from "./styles.module.css";
 const HeroSection = () => {
   return (
     <section className={styles.heroBg}>
-      <div className={styles.hero}>
+      <div className={`siteWrapper ${styles.hero}`}>
         <h1 className={styles.ttl}>Frequently Asked Questions</h1>
         <div className={styles.searchWrap}>
           <SearchIcon className={styles.icon1} />
