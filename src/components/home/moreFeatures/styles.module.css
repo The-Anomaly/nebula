@@ -81,6 +81,9 @@
   gap: 2rem;
   margin-bottom: 3rem;
 }
+.feature2 .imgSec svg {
+  width: 100%;
+}
 .feature2 .imgSec > svg:nth-of-type(2) {
   margin-top: 30px;
 }
@@ -106,4 +109,91 @@
   width: 100%;
   margin-bottom: 2rem;
   max-width: 484px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+@media screen and (max-width: 1000px) {
+  .ttl {
+    font-size: 36px;
+  }
+  .featureTtl {
+    font-size: 24px;
+    margin-bottom: 1.2rem;
+  }
+  .featureTxt {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .feature1,
+  .feature2,
+  .feature4 {
+    padding: 3rem 2rem;
+  }
+  .feature3 {
+    padding: 3rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .featuresWrap {
+    flex-direction: column;
+  }
+  .feature1,
+  .feature2,
+  .feature3,
+  .feature4 {
+    width: 100%;
+    padding: 3rem 2rem;
+  }
+  .feature3 {
+    flex-direction: column;
+  }
+  .feature3 svg {
+    width: 100%;
+    margin-bottom: 2rem;
+    max-width: 484px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .feature3 > div {
+    width: 100%;
+  }
+  .feature1 .imgSec,
+  .feature2 .imgSec {
+    max-width: 484px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ttl {
+    font-size: 32px;
+  }
+  .feature1 .imgSec svg {
+    width: 20px;
+    bottom: -10px;
+    right: -10px;
+  }
+  .feature1,
+  .feature2,
+  .feature3,
+  .feature4 {
+    width: 100%;
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+  }
+  .featureTtl {
+    font-size: 22px;
+    margin-bottom: 1rem;
+  }
+  .featureTxt {
+    font-size: 14px;
+  }
+  .feature1 .imgSec, .feature2 .imgSec {
+    margin-bottom: 2rem;
+  }
 }

@@ -1,5 +1,6 @@
 .waitlistBg {
-  background: var(--blue);
+  background-color: var(--blue);
+  background-image: url("../../../assets/vectors/waitListBg.svg");
   padding: 4rem 0;
   text-align: center;
   color: var(--lightText);
@@ -19,7 +20,8 @@
 }
 .form {
   height: 50px;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   margin: auto;
   font-family: "DM Sans";
   font-size: 16px;

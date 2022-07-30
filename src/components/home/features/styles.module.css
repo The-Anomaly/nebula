@@ -72,3 +72,58 @@
   letter-spacing: 0.3px;
   opacity: 0.64;
 }
+
+@media screen and (max-width: 1000px) {
+  .features {
+    padding-top: 400px;
+  }
+  .featuresTtl {
+    font-size: 36px;
+  }
+  .featuresTxt {
+    font-size: 16px;
+  }
+  .featureTtl {
+    font-size: 22px;
+    margin-bottom: 1rem;
+  }
+  .featureIcon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 2rem;
+  }
+  .featureIcon svg {
+    width: 14px;
+  }
+  .featureTxt {
+    max-width: 220px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .features {
+    padding-top: 250px;
+  }
+  .featuresWrap {
+    flex-direction: column;
+  }
+  .featureTxt {
+    margin: auto;
+    font-size: 14px;
+  }
+  .feature {
+    margin-bottom: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .featuresTtl {
+    font-size: 32px;
+    letter-spacing: normal;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  .featuresTxt {
+    font-size: 15px;
+  }
+}

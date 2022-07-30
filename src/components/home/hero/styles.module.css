@@ -45,7 +45,7 @@ button.playBtn {
   position: absolute;
   bottom: -500px;
   left: 26%;
-  width: 80%;
+  width: 60%;
   max-width: 474px;
 }
 .heroImg2 {
@@ -53,5 +53,87 @@ button.playBtn {
   bottom: -360px;
   left: 44%;
   max-width: 364px;
-  width: 60%;
+  width: 40%;
+}
+
+@media screen and (max-width: 1000px) {
+  .hero {
+    padding-bottom: 450px;
+  }
+  .heroTtl {
+    font-size: 60px;
+    letter-spacing: -2px;
+    max-width: 400px;
+  }
+  .heroTxt {
+    font-size: 18px;
+    max-width: 400px;
+  }
+  .heroImg1 {
+    width: 40%;
+    bottom: -300px;
+  }
+  .heroImg2 {
+    width: 30%;
+    bottom: -160px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hero {
+    padding-bottom: 350px;
+  }
+  .heroImg1 {
+    bottom: -200px;
+    width: 280px;
+  }
+  .heroImg2 {
+    bottom: -100px;
+    width: 200px;
+  }
+  .heroTtl {
+    font-size: 44px;
+    max-width: 280px;
+  }
+  .heroTxt {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    padding-top: 5rem;
+    padding-bottom: 250px;
+  }
+  .heroImg1 {
+    bottom: -200px;
+    width: 220px;
+  }
+  .heroImg2 {
+    bottom: -100px;
+    width: 160px;
+  }
+  .heroTtl {
+    font-size: 40px;
+    max-width: 250px;
+  }
+  .heroTxt {
+    font-size: 14px;
+    margin-bottom: 2rem;
+    max-width: 350px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hero {
+    padding-bottom: 200px;
+  }
+  .heroImg1 {
+    bottom: -150px;
+    width: 180px;
+  }
+  .heroImg2 {
+    bottom: -80px;
+    width: 120px;
+  }
 }

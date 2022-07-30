@@ -78,3 +78,49 @@
   right: 10%;
   top: 260px;
 }
+
+@media screen and (max-width: 800px) {
+  .nebList {
+    max-width: 500px;
+    min-height: 400px;
+  }
+  .nebCard {
+    font-size: 16px;
+    padding: 6px 20px;
+  }
+  .neb4 {
+    top: 80px;
+    left: 1rem;
+  }
+  .neb5 {
+    top: 100px;
+    left: 38%;
+  }
+  .neb6 {
+    top: 80px;
+    right: 1rem;
+  }
+  .neb7 {
+    top: 180px;
+  }
+  .neb8 {
+    top: 200px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .nebList {
+    transform: scale(calc(0.8 * 100vh));
+  }
+  .nebCard {
+    font-size: 14px;
+    padding: 6px 16px;
+  }
+  .neb2 {
+    right: 40%;
+    top: 30px;
+  }
+  .neb5 {
+    top: 130px;
+  }
+}
