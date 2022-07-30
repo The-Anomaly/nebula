@@ -1,0 +1,16 @@
+.heroBg {
+  background: var(--blue);
+  color: var(--lightText);
+  padding: 6rem 0 5.6rem;
+}
+.hero {
+  text-align: center;
+}
+.ttl {
+  margin-bottom: 2rem;
+  font-size: 58px;
+  letter-spacing: -2px;
+}
+.txt {
+  font-size: 19px;
+}

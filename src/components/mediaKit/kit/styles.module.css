@@ -1,0 +1,139 @@
+.kitBg {
+}
+.kit {
+  color: var(--lightText);
+  gap: 2rem;
+  padding-bottom: 4rem;
+  padding-right: 8%;
+}
+.kitCategory {
+  color: var(--secondaryText);
+  font-size: 15px;
+  padding-top: 5rem;
+  position: sticky;
+  top: 0;
+}
+.kitCategory p {
+  margin-bottom: 2.5rem;
+  cursor: pointer;
+}
+.active {
+  color: var(--lightText);
+}
+.kitWrap {
+  margin-left: 300px;
+  position: relative;
+  margin-top: -256px;
+  padding-top: 4rem;
+
+  max-width: 580px;
+}
+.categoryTtl {
+  font-size: 36px;
+  margin-bottom: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.kitWrap > div {
+  margin-bottom: 7rem;
+}
+
+.logoSec {
+}
+.logoTxt {
+  line-height: 2;
+  margin-bottom: 6rem;
+}
+.logo {
+  border: 0.744653px solid #5f6b7c;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
+}
+.logo svg {
+  width: 55%;
+}
+.clearSpaceSec {
+}
+.clearSpaceLogo {
+  width: 100%;
+  max-width: 430px;
+  margin-bottom: 3.5rem;
+}
+.clearSpaceIcon {
+  width: 30%;
+  max-width: 163px;
+}
+.assetWrap {
+  border-bottom: 1px solid #5f6b7c;
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+.assetWrap:nth-of-type(1) svg {
+  max-width: 260px;
+  width: 50%;
+}
+.assetWrap:nth-of-type(2) svg {
+  width: 90px;
+}
+.assetWrap:nth-of-type(3) svg {
+  width: 170px;
+}
+.assetWrap:nth-of-type(4) svg {
+  width: 170px;
+}
+.assetWrap:nth-of-type(4) {
+  padding-top: 2rem;
+}
+.assetWrap p {
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+.assetWrap .assets {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.assetsBtnSec button {
+  border: 1px solid #5f6b7c;
+  background: transparent;
+  color: var(--lightText);
+  padding: 8px 22px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+.assetsBtnSec button:first-child {
+  margin-right: 1.5rem;
+}
+.assetWrap svg {
+  margin-left: auto;
+  position: absolute;
+  right: 0;
+  bottom: 2rem;
+}
+.colorSec {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  align-items: flex-end;
+}
+.blue {
+  background: var(--blue);
+  width: 60%;
+  height: 180px;
+}
+.purple {
+  background: var(--purple);
+  width: 60%;
+  height: 180px;
+}
+.colorName {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+.colorCode {
+  font-size: 32px;
+}

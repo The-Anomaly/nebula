@@ -20,6 +20,11 @@ import { ReactComponent as ShareCluster } from "./shareCluster.svg";
 import { ReactComponent as NebEllipse } from "./nebEllipse.svg";
 import { ReactComponent as PlusIcon } from "./plusIcon.svg";
 import { ReactComponent as SearchIcon } from "./search.svg";
+import { ReactComponent as ClearSpaceLogo } from "./clearSpaceLogo.svg";
+import { ReactComponent as ClearSpaceIcon } from "./clearSpaceIcon.svg";
+import { ReactComponent as Logo } from "./logo.svg";
+import { ReactComponent as LogoType } from "./logoType.svg";
+import { ReactComponent as LogoVertical } from "./logoVertical.svg";
 
 export {
   LogoWithDarkText,
@@ -44,4 +49,9 @@ export {
   NebEllipse,
   PlusIcon,
   SearchIcon,
+  ClearSpaceIcon,
+  ClearSpaceLogo,
+  Logo,
+  LogoType,
+  LogoVertical,
 };
