@@ -47,6 +47,10 @@ button.playBtn {
   left: 26%;
   width: 60%;
   max-width: 474px;
+  animation-name: translateImg1;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 .heroImg2 {
   position: absolute;
@@ -54,6 +58,22 @@ button.playBtn {
   left: 44%;
   max-width: 364px;
   width: 40%;
+  animation-name: translateImg1;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes translateImg1 {
+  0% {
+    transform: translateY(-100px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -98,6 +118,18 @@ button.playBtn {
   .heroTxt {
     font-size: 16px;
   }
+  @keyframes translateImg1 {
+    0% {
+      transform: translateY(-60px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(-60px);
+    }
+  }
+  
 }
 
 @media screen and (max-width: 600px) {
@@ -114,13 +146,7 @@ button.playBtn {
     width: 160px;
   }
   .heroTtl {
-    font-size: 40px;
-    max-width: 250px;
-  }
-  .heroTxt {
-    font-size: 14px;
-    margin-bottom: 2rem;
-    max-width: 350px;
+    font-size: 44px;
   }
 }
 
@@ -135,5 +161,16 @@ button.playBtn {
   .heroImg2 {
     bottom: -80px;
     width: 120px;
+  }
+  @keyframes translateImg1 {
+    0% {
+      transform: translateY(-30px);
+    }
+    50% {
+      transform: translateY(60px);
+    }
+    100% {
+      transform: translateY(-30px);
+    }
   }
 }

@@ -1,7 +1,7 @@
 .nebBg {
 }
 .neb {
-  padding: 2rem 0 0;
+  padding-top: 2rem;
 }
 .ttl {
   margin-bottom: 8rem;
@@ -78,10 +78,18 @@
   right: 10%;
   top: 260px;
 }
+.nebCard:hover {
+  transform: scale(1.2);
+  cursor: default;
+  transition: 0.5s;
+}
+.large:hover {
+  transform: scale(1.4);
+}
 
 @media screen and (max-width: 800px) {
   .nebList {
-    max-width: 500px;
+    max-width: 550px;
     min-height: 400px;
   }
   .nebCard {
@@ -90,7 +98,6 @@
   }
   .neb4 {
     top: 80px;
-    left: 1rem;
   }
   .neb5 {
     top: 100px;
@@ -98,7 +105,6 @@
   }
   .neb6 {
     top: 80px;
-    right: 1rem;
   }
   .neb7 {
     top: 180px;
@@ -122,5 +128,9 @@
   }
   .neb5 {
     top: 130px;
+  }
+  .ttl {
+    font-size: 26px;
+    margin-bottom: 5rem;
   }
 }

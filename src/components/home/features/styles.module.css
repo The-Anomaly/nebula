@@ -57,6 +57,7 @@
   margin-bottom: 4rem;
 }
 .featureIcon svg {
+  transform: scale(0.8);
 }
 .featureTtl {
   color: #fff;
@@ -67,7 +68,7 @@
 .featureTxt {
   color: #9fb5bf;
   font-size: 14.5px;
-  max-width: 250px;
+  max-width: 260px;
   line-height: 2;
   letter-spacing: 0.3px;
   opacity: 0.64;
@@ -93,7 +94,7 @@
     margin-bottom: 2rem;
   }
   .featureIcon svg {
-    width: 14px;
+    transform: scale(0.7);
   }
   .featureTxt {
     max-width: 220px;

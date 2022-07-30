@@ -4,8 +4,18 @@ import { HeroSection } from "./hero";
 import { MoreFeatures } from "./moreFeatures";
 import { NebAddresses } from "./neb";
 import { Waitlist } from "./waitlist";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const HomeUI = () => {
+  React.useEffect((): any => {
+    AOS.init({
+      duration: 1500,
+      offset: 100,
+      easing: "ease-in-out",
+    });
+    AOS.refresh();
+  }, []);
   return (
     <>
       <HeroSection />

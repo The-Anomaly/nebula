@@ -27,7 +27,7 @@ const MoreFeatures = () => {
           All the important features, and then some more...
         </h3>
         <div className={styles.featuresWrap}>
-          <div className={styles.feature1}>
+          <div data-aos="slide-up" className={styles.feature1}>
             <div className={styles.imgSec}>
               <div>
                 <img src={nft1} />
@@ -60,7 +60,7 @@ const MoreFeatures = () => {
               them clusters) to anyone at a go.
             </p>
           </div>
-          <div className={styles.feature2}>
+          <div data-aos="slide-up" className={styles.feature2}>
             <div className={styles.imgSec}>
               <Dapps1 />
               <Dapps2 />
@@ -72,7 +72,7 @@ const MoreFeatures = () => {
               Explore your favourite dapps using the Nebula Dapp browser.
             </p>
           </div>
-          <div className={styles.feature3}>
+          <div data-aos="slide-up" className={styles.feature3}>
             <Portfolio />
             <div>
               <p className={styles.featureTtl}>Monitor your portfolio</p>
@@ -82,7 +82,7 @@ const MoreFeatures = () => {
               </p>
             </div>
           </div>
-          <div className={styles.feature4}>
+          <div data-aos="slide-up" className={styles.feature4}>
             <Swap />
             <p className={styles.featureTtl}>Swap with ease</p>
             <p className={styles.featureTxt}>
@@ -90,7 +90,7 @@ const MoreFeatures = () => {
               Simple, intuitive and easy.
             </p>
           </div>
-          <div className={styles.feature4}>
+          <div data-aos="slide-up" className={styles.feature4}>
             <img src={shareCluster} alt="" />
             <p className={styles.featureTtl}>Share Clusters</p>
             <p className={styles.featureTxt}>

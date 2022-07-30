@@ -1,22 +1,47 @@
-import { KeyIcon } from "assets";
+import { CrossChainIcon, KeyIcon, LockIcon } from "assets";
 import * as React from "react";
 import styles from "./styles.module.css";
 
-const FeatureCard = () => {
+interface FeatureProps {
+  Icon: React.FunctionComponent<
+    React.SVGProps<SVGSVGElement> & {
+      title?: string | undefined;
+    }
+  >;
+  title: string;
+  text: string;
+}
+
+const FeatureCard: React.FC<FeatureProps> = ({ Icon, title, text }) => {
   return (
     <div className={styles.feature}>
       <div className={styles.featureIcon}>
-        <KeyIcon />
+        <Icon />
       </div>
-      <p className={styles.featureTtl}>Non-Custodial</p>
-      <p className={styles.featureTxt}>
-        You have complete control of your private keys.
-      </p>
+      <p className={styles.featureTtl}>{title}</p>
+      <p className={styles.featureTxt}>{text}</p>
     </div>
   );
 };
 
 const Features = () => {
+  const features: FeatureProps[] = [
+    {
+      Icon: KeyIcon,
+      title: "Non-Custodial",
+      text: "You have complete control of your private keys.",
+    },
+    {
+      Icon: CrossChainIcon,
+      title: "Cross-Chain",
+      text: "Perform multiple transactions across ethereum and  solana with ease",
+    },
+    {
+      Icon: LockIcon,
+      title: "Secure",
+      text: "Protect your assets with ease and experience the security you expect",
+    },
+  ];
   return (
     <>
       <section className={styles.featuresBg}>
@@ -29,9 +54,9 @@ const Features = () => {
             and Solana ecosystems seamlessly
           </p>
           <div className={styles.featuresWrap}>
-            <FeatureCard />
-            <FeatureCard />
-            <FeatureCard />
+            {features.map((item, index) => (
+              <FeatureCard {...item} key={index} />
+            ))}
           </div>
         </div>
       </section>
