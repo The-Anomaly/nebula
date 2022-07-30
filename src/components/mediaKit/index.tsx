@@ -1,3 +1,4 @@
+import { Contact } from "components";
 import * as React from "react";
 import { HeroSection } from "./hero";
 import { Kit } from "./kit";
@@ -8,6 +9,7 @@ const MediaKitUI = () => {
     <>
       <HeroSection />
       <Kit />
+      <Contact title={"Got inquiries?"} />
     </>
   );
 };

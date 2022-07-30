@@ -1,0 +1,26 @@
+.contact {
+  color: var(--darkText);
+  text-align: center;
+  padding: 3rem 1rem;
+  max-width: 700px;
+  margin: 7rem auto 5rem;
+  background: #eef6fd;
+  border-radius: 48px;
+}
+.ttl {
+  font-size: 40px;
+  margin-bottom: 1.5rem;
+  letter-spacing: -2px;
+  font-weight: 600;
+}
+.txt {
+  color: #747576;
+  margin-bottom: 2.5rem;
+  font-size: 17px;
+}
+.btn {
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 1.2rem 3.2rem;
+}

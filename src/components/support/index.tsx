@@ -1,3 +1,4 @@
+import { Contact } from "components/generalComponents";
 import * as React from "react";
 import { Faq, FAQType } from "./faq";
 import { HeroSection } from "./hero";
@@ -126,6 +127,7 @@ const SupportUI = () => {
     <>
       <HeroSection />
       <Faq faqs={faqs} />
+      <Contact title={"Still got questions?"} />
     </>
   );
 };
