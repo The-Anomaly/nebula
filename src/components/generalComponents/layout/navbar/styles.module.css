@@ -1,5 +1,8 @@
 .navBg {
   font-size: 13px;
+  position: fixed;
+  width: 100%;
+  z-index: 4;
 }
 .light {
   background: #f6f6f6;
@@ -39,4 +42,55 @@
 .dark .navItems a:hover {
   color: var(--lightText);
   font-weight: 500;
+}
+.mobileNav {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .nav {
+    display: none;
+  }
+  .mobileNav {
+    display: block;
+  }
+  .openNav {
+    height: 100vh;
+  }
+  .mobileNav .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+  }
+  .navItems {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    padding-top: 1rem;
+  }
+  .navItems li {
+    padding: 1.5rem 0;
+  }
+  .light .navItems li {
+    color: var(--darkText);
+    border-bottom: 1px solid #d9d9d9;
+  }
+  .dark .navItems li {
+    color: var(--lightText);
+    border-bottom: 1px solid #2f373f;
+  }
+  .menuBtn {
+    width: 28px;
+  }
+  .menuBtnClose {
+    width: 20px;
+  }
+  .light .menuBtnClose rect {
+    fill: var(--dark);
+  }
+  .menuBtn rect {
+    fill: #9b9fa4;
+  }
 }

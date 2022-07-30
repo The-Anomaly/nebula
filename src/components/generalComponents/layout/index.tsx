@@ -11,7 +11,7 @@ const Layout: React.FC<LayoutProps> = ({ children, type, active }) => {
   return (
     <>
       <Navbar type={type} active={active} />
-      <main>{children}</main>
+      <main className={styles.wrapper}>{children}</main>
       <Footer />
     </>
   );

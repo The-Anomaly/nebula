@@ -25,6 +25,8 @@ import { ReactComponent as ClearSpaceIcon } from "./clearSpaceIcon.svg";
 import { ReactComponent as Logo } from "./logo.svg";
 import { ReactComponent as LogoType } from "./logoType.svg";
 import { ReactComponent as LogoVertical } from "./logoVertical.svg";
+import { ReactComponent as MenuClose } from "./menuClose.svg";
+import { ReactComponent as MenuOpen } from "./hamburgerMenu.svg";
 
 export {
   LogoWithDarkText,
@@ -54,4 +56,6 @@ export {
   Logo,
   LogoType,
   LogoVertical,
+  MenuClose,
+  MenuOpen,
 };
