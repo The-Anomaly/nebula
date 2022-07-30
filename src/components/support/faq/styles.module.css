@@ -79,3 +79,49 @@
 .faqWrap > div {
   margin-bottom: 7rem;
 }
+
+@media screen and (max-width: 1000px) {
+  .faqWrap {
+    margin-left: 150px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .faqCategory {
+    display: none;
+  }
+  .faqWrap {
+    margin-left: 0;
+    max-width: unset;
+    margin-top: 0;
+    padding-top: 4rem;
+  }
+  .categoryTtl {
+    font-size: 28px;
+  }
+  .faq {
+    padding-right: 2rem;
+  }
+  .faqItem {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .faq {
+    padding-right: 1rem;
+  }
+  .categoryTtl {
+    font-weight: 500;
+  }
+  .faqItem {
+    font-size: 15px;
+    margin-bottom: 1.5rem;
+  }
+  .faqBtn {
+    padding-bottom: 2rem;
+  }
+  .faqBtn svg {
+    width: 20px;
+  }
+}

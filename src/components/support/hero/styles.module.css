@@ -42,3 +42,44 @@
 .icon2 path {
   fill: red;
 }
+
+@media screen and (max-width: 1000px) {
+  .ttl {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+  .searchWrap {
+    height: 50px;
+  }
+  .searchWrap input {
+    border-radius: 10px;
+    font-size: 14px;
+    padding-left: 3rem;
+    padding-right: 2rem;
+  }
+  .icon1 {
+    top: 14px;
+    width: 20px;
+    left: 1rem;
+  }
+  .icon2 {
+    top: 16px;
+    right: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ttl {
+    font-size: 32px;
+  }
+  .heroBg {
+    padding: 3rem 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .ttl {
+    font-size: 28px;
+    font-weight: 500;
+  }
+}
