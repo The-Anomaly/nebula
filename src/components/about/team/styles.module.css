@@ -27,7 +27,6 @@
   margin: auto;
 }
 .member {
-
 }
 .img {
   background: #d9d9d9;
@@ -39,6 +38,7 @@
 .img img {
   width: 100%;
   object-fit: cover;
+  border-radius: inherit;
 }
 .name {
   font-size: 22px;
@@ -46,4 +46,42 @@
 }
 .role {
   color: #5f6b7c;
+}
+
+@media screen and (max-width: 800px) {
+  .teamBg {
+    background: var(--dark);
+  }
+  .team {
+    text-align: left;
+  }
+  .ttl {
+    font-size: 32px;
+  }
+  .txt {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .memberList {
+    grid-template-columns: auto auto auto;
+    gap: 4rem 1rem;
+  }
+  .ttl {
+    margin-bottom: 1rem;
+  }
+  .txt {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .memberList {
+    grid-template-columns: auto auto;
+    padding: 0 1rem;
+  }
+  .ttl {
+    font-size: 28px;
+    font-weight: 500;
+  }
 }

@@ -92,35 +92,35 @@ const Kit = () => {
             <div className={styles.assetsSec}>
               <div className={styles.assetWrap}>
                 <p>MAIN LOGO</p>
+                <LogoWithLightText />
                 <div className={styles.assetsBtnSec}>
                   <button className={styles.assetsBtn}>PNG</button>
                   <button className={styles.assetsBtn}>SVG</button>
                 </div>
-                <LogoWithLightText />
               </div>
               <div className={styles.assetWrap}>
                 <p>LOGOMARK</p>
+                <Logo />
                 <div className={styles.assetsBtnSec}>
                   <button className={styles.assetsBtn}>PNG</button>
                   <button className={styles.assetsBtn}>SVG</button>
                 </div>
-                <Logo />
               </div>
               <div className={styles.assetWrap}>
                 <p>LOGOTYPE</p>
+                <LogoType />
                 <div className={styles.assetsBtnSec}>
                   <button className={styles.assetsBtn}>PNG</button>
                   <button className={styles.assetsBtn}>SVG</button>
                 </div>
-                <LogoType />
               </div>
               <div className={styles.assetWrap}>
                 <p>VERTICAL LOCKUP</p>
+                <LogoVertical />
                 <div className={styles.assetsBtnSec}>
                   <button className={styles.assetsBtn}>PNG</button>
                   <button className={styles.assetsBtn}>SVG</button>
                 </div>
-                <LogoVertical />
               </div>
             </div>
             <div className={styles.colorSec}>

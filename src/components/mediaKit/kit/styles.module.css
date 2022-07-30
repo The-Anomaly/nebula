@@ -61,10 +61,12 @@
   width: 100%;
   max-width: 430px;
   margin-bottom: 3.5rem;
+  display: block;
 }
 .clearSpaceIcon {
   width: 30%;
   max-width: 163px;
+  display: block;
 }
 .assetWrap {
   border-bottom: 1px solid #5f6b7c;
@@ -136,4 +138,83 @@
 }
 .colorCode {
   font-size: 32px;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .kitWrap {
+    margin-left: 150px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .kitCategory {
+    display: none;
+  }
+  .kitWrap {
+    margin-left: 0;
+    max-width: unset;
+    margin-top: 0;
+  }
+  .categoryTtl {
+    font-size: 28px;
+    margin-bottom: 2rem;
+  }
+  .logoTxt {
+    font-size: 14px;
+    margin-bottom: 4rem;
+  }
+  .kit {
+    padding-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .kit {
+    padding-right: 1rem;
+  }
+  .categoryTtl {
+    font-weight: 500;
+  }
+  .assetWrap {
+    padding-bottom: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  .assetWrap svg {
+    position: unset;
+    margin-bottom: 2rem;
+  }
+  .assetWrap p {
+    margin-bottom: 2rem;
+  }
+  .assetWrap:nth-of-type(1) svg {
+    max-width: 260px;
+    min-width: 200px;
+    width: 60%;
+  }
+  .assetWrap:nth-of-type(2) svg {
+    width: 80px;
+  }
+  .assetsBtnSec button {
+    font-size: 18px;
+    padding: 6px 20px;
+    border-radius: 6px;
+  }
+  .colorSec {
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+  .colorSec > div {
+    width: 100%;
+  }
+  .blue, .purple {
+    margin-bottom: 2rem;
+    height: 160px;
+  }
+  .colorName {
+    font-size: 16px;
+  }
+  .colorCode {
+    font-size: 24px;
+  }
 }

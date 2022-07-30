@@ -13,4 +13,36 @@
 }
 .txt {
   font-size: 18px;
+  line-height: 1.7;
+}
+
+@media screen and (max-width: 1000px) {
+  .ttl {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+  .txt {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ttl {
+    font-size: 32px;
+  }
+  .txt {
+    font-size: 14px;
+    max-width: 250px;
+    margin: auto;
+  }
+  .heroBg {
+    padding: 3rem 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .ttl {
+    font-size: 28px;
+    font-weight: 500;
+  }
 }
