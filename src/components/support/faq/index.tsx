@@ -9,7 +9,7 @@ export interface FAQType {
 
 interface FAQITemProps {
   question: string;
-  answer: string;
+  answer: string | any;
 }
 
 const FAQItem: React.FC<FAQITemProps> = ({ question, answer }) => {
