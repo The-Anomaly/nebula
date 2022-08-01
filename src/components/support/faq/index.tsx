@@ -45,9 +45,10 @@ const FAQItem: React.FC<FAQITemProps> = ({ question, answer }) => {
 
 interface FAQProp {
   faqs: FAQType[];
+  search: { show: boolean; results: FAQITemProps[] };
 }
 
-const Faq: React.FC<FAQProp> = ({ faqs }) => {
+const Faq: React.FC<FAQProp> = ({ faqs, search }) => {
   const ref1 = React.useRef(null);
   const ref2 = React.useRef(null);
   const ref3 = React.useRef(null);
@@ -91,52 +92,76 @@ const Faq: React.FC<FAQProp> = ({ faqs }) => {
   return (
     <section className={styles.faqBg}>
       <div className={`siteWrapper ${styles.faq}`}>
-        <div className={styles.faqCategory}>
-          {categories.map((item, index) => (
-            <p
-              key={index}
-              className={item.active ? styles.active : ""}
-              role="button"
-              tabIndex={0}
-              onClick={() => scrollToCategory(item.scrollId)}
-            >
-              {item.name}
-            </p>
-          ))}
-        </div>
-        <div className={styles.faqWrap}>
-          <div ref={ref1} id="gettingStarted">
-            <p className={styles.categoryTtl}>Getting Started</p>
-            <div className={styles.faqList}>
-              {faqs[0].faqs.map((item, index) => (
-                <FAQItem key={index} {...item} />
-              ))}
-            </div>
+        {!search.show ? (
+          <div className={styles.faqCategory}>
+            {categories.map((item, index) => (
+              <p
+                key={index}
+                className={item.active ? styles.active : ""}
+                role="button"
+                tabIndex={0}
+                onClick={() => scrollToCategory(item.scrollId)}
+              >
+                {item.name}
+              </p>
+            ))}
           </div>
-          <div ref={ref2} id="sending">
-            <p className={styles.categoryTtl}>Sending and Receiving</p>
-            <div className={styles.faqList}>
-              {faqs[1].faqs.map((item, index) => (
-                <FAQItem key={index} {...item} />
-              ))}
-            </div>
-          </div>
-          <div ref={ref3} id="security">
-            <p className={styles.categoryTtl}>Security</p>
-            <div className={styles.faqList}>
-              {faqs[2].faqs.map((item, index) => (
-                <FAQItem key={index} {...item} />
-              ))}
-            </div>
-          </div>
-          <div ref={ref4} id="other">
-            <p className={styles.categoryTtl}>Other topics</p>
-            <div className={styles.faqList}>
-              {faqs[3].faqs.map((item, index) => (
-                <FAQItem key={index} {...item} />
-              ))}
-            </div>
-          </div>
+        ) : (
+          ""
+        )}
+        <div
+          className={`${styles.faqWrap} ${search.show ? styles.search : ""}`}
+        >
+          {search.show ? (
+            <>
+              {search.results.length > 0 ? (
+                <div className={styles.faqList}>
+                  {search.results.map((item, index) => (
+                    <FAQItem key={index} {...item} />
+                  ))}
+                </div>
+              ) : (
+                <div className={styles.noResults} >
+                  <p>There are no results for this search</p>
+                </div>
+              )}
+            </>
+          ) : (
+            <>
+              <div ref={ref1} id="gettingStarted">
+                <p className={styles.categoryTtl}>Getting Started</p>
+                <div className={styles.faqList}>
+                  {faqs[0].faqs.map((item, index) => (
+                    <FAQItem key={index} {...item} />
+                  ))}
+                </div>
+              </div>
+              <div ref={ref2} id="sending">
+                <p className={styles.categoryTtl}>Sending and Receiving</p>
+                <div className={styles.faqList}>
+                  {faqs[1].faqs.map((item, index) => (
+                    <FAQItem key={index} {...item} />
+                  ))}
+                </div>
+              </div>
+              <div ref={ref3} id="security">
+                <p className={styles.categoryTtl}>Security</p>
+                <div className={styles.faqList}>
+                  {faqs[2].faqs.map((item, index) => (
+                    <FAQItem key={index} {...item} />
+                  ))}
+                </div>
+              </div>
+              <div ref={ref4} id="other">
+                <p className={styles.categoryTtl}>Other topics</p>
+                <div className={styles.faqList}>
+                  {faqs[3].faqs.map((item, index) => (
+                    <FAQItem key={index} {...item} />
+                  ))}
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </section>

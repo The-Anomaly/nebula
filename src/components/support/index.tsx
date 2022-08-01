@@ -1,10 +1,15 @@
-import { Contact } from "components/generalComponents";
+import { Contact, Preloader } from "components";
 import * as React from "react";
 import { Faq, FAQType } from "./faq";
 import { HeroSection } from "./hero";
-import styles from "./styles.module.css";
 
 const SupportUI = () => {
+  const [search, setSearch] = React.useState<any>({
+    show: false,
+    results: [],
+  });
+  const [loading, setLoading] = React.useState(false);
+
   const faqs: FAQType[] = [
     {
       category: "gettingStarted",
@@ -359,10 +364,37 @@ However, asides gas you would not lose any of your assets if your swap fails.
       ],
     },
   ];
+
+  const faqSearch = (x) => {
+    if (x) {
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(false);
+      }, 1500);
+      const newlist = faqs.map((item) => item.faqs).flat(1);
+
+      const res = newlist.filter(
+        (item) =>
+          item.question.toLowerCase().match(x.toLowerCase()) ||
+          String(item.answer).toLowerCase().match(x.toLowerCase())
+      );
+      setSearch({
+        show: true,
+        results: res,
+      });
+      return res;
+    } else {
+      setSearch({
+        show: false,
+        results: [],
+      });
+    }
+  };
   return (
     <>
-      <HeroSection />
-      <Faq faqs={faqs} />
+      <Preloader loading={loading} />
+      <HeroSection faqSearch={faqSearch} />
+      <Faq faqs={faqs} search={search} />
       <Contact title={"Still got questions?"} />
     </>
   );
