@@ -17,16 +17,16 @@ const Footer = () => {
         <div className={styles.sec1}>
           <LogoWithLightText className={styles.logo} />
           <div className={styles.socials}>
-            <a target="_blank" rel="noreferrer" >
+            <a href="https://twitter.com/walletnebula?s=21&t=8y6nK6Lug38PUeBOrFBzXg" target="_blank" rel="noreferrer" >
               <TwitterIcon />
             </a>
-            <a target="_blank" rel="noreferrer" >
+            <a href="https://t.me/nebulawallet" target="_blank" rel="noreferrer" >
               <TelegramIcon />
             </a>
-            <a target="_blank" rel="noreferrer" >
+            <a href="https://vm.tiktok.com/ZMN44rUNH/" target="_blank" rel="noreferrer" >
               <TiktokIcon />
             </a>
-            <a target="_blank" rel="noreferrer" >
+            <a href="https://medium.com/@media_26466" target="_blank" rel="noreferrer" >
               <MediumIcon />
             </a>
           </div>
