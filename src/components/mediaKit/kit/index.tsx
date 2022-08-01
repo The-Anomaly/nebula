@@ -2,9 +2,17 @@ import {
   ClearSpaceIcon,
   ClearSpaceLogo,
   Logo,
+  logoMark,
+  logoMarkSVG,
+  logoType,
   LogoType,
+  logoTypeSVG,
   LogoVertical,
   LogoWithLightText,
+  mainLogo,
+  mainLogoSVG,
+  verticalLogo,
+  verticalLogoSVG,
 } from "assets";
 import * as React from "react";
 import styles from "./styles.module.css";
@@ -94,32 +102,88 @@ const Kit = () => {
                 <p>MAIN LOGO</p>
                 <LogoWithLightText />
                 <div className={styles.assetsBtnSec}>
-                  <button className={styles.assetsBtn}>PNG</button>
-                  <button className={styles.assetsBtn}>SVG</button>
+                  <a
+                    target="_blank"
+                    href={mainLogo}
+                    download="Nebula - Main Logo"
+                    className={styles.assetsBtn}
+                  >
+                    PNG
+                  </a>
+                  <a
+                    className={styles.assetsBtn}
+                    href={mainLogoSVG}
+                    download="Nebula - Main Logo"
+                    target={"_blank"}
+                  >
+                    SVG
+                  </a>
                 </div>
               </div>
               <div className={styles.assetWrap}>
                 <p>LOGOMARK</p>
                 <Logo />
                 <div className={styles.assetsBtnSec}>
-                  <button className={styles.assetsBtn}>PNG</button>
-                  <button className={styles.assetsBtn}>SVG</button>
+                  <a
+                    download="Nebula - Logo Mark"
+                    href={logoMark}
+                    target="_blank"
+                    className={styles.assetsBtn}
+                  >
+                    PNG
+                  </a>
+                  <a
+                    download="Nebula - Logo Mark"
+                    href={logoMarkSVG}
+                    className={styles.assetsBtn}
+                    target={"_blank"}
+                  >
+                    SVG
+                  </a>
                 </div>
               </div>
               <div className={styles.assetWrap}>
                 <p>LOGOTYPE</p>
                 <LogoType />
                 <div className={styles.assetsBtnSec}>
-                  <button className={styles.assetsBtn}>PNG</button>
-                  <button className={styles.assetsBtn}>SVG</button>
+                  <a
+                    download="Nebula - Logo Type"
+                    href={logoType}
+                    target="_blank"
+                    className={styles.assetsBtn}
+                  >
+                    PNG
+                  </a>
+                  <a
+                    download="Nebula - Logo Type"
+                    href={logoTypeSVG}
+                    className={styles.assetsBtn}
+                    target={"_blank"}
+                  >
+                    SVG
+                  </a>
                 </div>
               </div>
               <div className={styles.assetWrap}>
                 <p>VERTICAL LOCKUP</p>
                 <LogoVertical />
                 <div className={styles.assetsBtnSec}>
-                  <button className={styles.assetsBtn}>PNG</button>
-                  <button className={styles.assetsBtn}>SVG</button>
+                  <a
+                    download="Nebula - Vertical Logo"
+                    href={verticalLogo}
+                    target="_blank"
+                    className={styles.assetsBtn}
+                  >
+                    PNG
+                  </a>
+                  <a
+                    download="Nebula - Vertical Logo"
+                    href={verticalLogoSVG}
+                    className={styles.assetsBtn}
+                    target={"_blank"}
+                  >
+                    SVG
+                  </a>
                 </div>
               </div>
             </div>

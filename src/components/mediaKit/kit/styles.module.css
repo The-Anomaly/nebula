@@ -99,15 +99,16 @@
   justify-content: space-between;
   align-items: flex-end;
 }
-.assetsBtnSec button {
+.assetsBtnSec a {
   border: 1px solid #5f6b7c;
   background: transparent;
   color: var(--lightText);
   padding: 8px 22px;
   border-radius: 8px;
   font-size: 20px;
+  text-decoration: none;
 }
-.assetsBtnSec button:first-child {
+.assetsBtnSec a:first-child {
   margin-right: 1.5rem;
 }
 .assetWrap svg {
@@ -195,7 +196,7 @@
   .assetWrap:nth-of-type(2) svg {
     width: 80px;
   }
-  .assetsBtnSec button {
+  .assetsBtnSec a {
     font-size: 18px;
     padding: 6px 20px;
     border-radius: 6px;

@@ -27,6 +27,10 @@ import { ReactComponent as LogoType } from "./logoType.svg";
 import { ReactComponent as LogoVertical } from "./logoVertical.svg";
 import { ReactComponent as MenuClose } from "./menuClose.svg";
 import { ReactComponent as MenuOpen } from "./hamburgerMenu.svg";
+import logoMarkSVG from "./logo.svg";
+import logoTypeSVG from "./logoType.svg";
+import mainLogoSVG from "./logoWithLightText.svg";
+import verticalLogoSVG from "./logoVertical.svg";
 
 export {
   LogoWithDarkText,
@@ -58,4 +62,8 @@ export {
   LogoVertical,
   MenuClose,
   MenuOpen,
+  logoMarkSVG,
+  verticalLogoSVG,
+  mainLogoSVG,
+  logoTypeSVG,
 };
