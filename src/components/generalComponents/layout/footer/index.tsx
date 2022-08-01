@@ -17,16 +17,16 @@ const Footer = () => {
         <div className={styles.sec1}>
           <LogoWithLightText className={styles.logo} />
           <div className={styles.socials}>
-            <a>
+            <a target="_blank" rel="noreferrer" >
               <TwitterIcon />
             </a>
-            <a>
+            <a target="_blank" rel="noreferrer" >
               <TelegramIcon />
             </a>
-            <a>
+            <a target="_blank" rel="noreferrer" >
               <TiktokIcon />
             </a>
-            <a>
+            <a target="_blank" rel="noreferrer" >
               <MediumIcon />
             </a>
           </div>
@@ -55,10 +55,10 @@ const Footer = () => {
               <Link to={Routes.support}>Support</Link>
             </li>
             <li>
-              <a>API Docs</a>
+              <a href="https://docs.nebulawallet.io/" target="_blank" rel="noreferrer" >API Docs</a>
             </li>
             <li>
-              <a>Partnerships</a>
+              <a target="_blank" rel="noreferrer" >Partnerships</a>
             </li>
           </ul>
         </div>
