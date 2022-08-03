@@ -1,5 +1,5 @@
 import { Layout, LayoutProps } from "components";
-import { About, Home, MediaKit, Support } from "pages";
+import { About, Home, MediaKit, Privacy, Support } from "pages";
 import { RouteProps } from "react-router-dom";
 import { Routes } from "./routes";
 
@@ -47,5 +47,11 @@ export const RouteBuilder: RouteBuilderItem[] = [
     Element: About,
     Layout: Layout,
     props: { type: "dark", active: "about" },
+  },
+  {
+    path: Routes.privacy,
+    Element: Privacy,
+    Layout: Layout,
+    props: { type: "dark", active: "" },
   },
 ];

@@ -58,7 +58,7 @@ const Footer = () => {
               <a href="https://docs.nebulawallet.io/" target="_blank" rel="noreferrer" >API Docs</a>
             </li>
             <li>
-              <a target="_blank" rel="noreferrer" >Partnerships</a>
+              <a href="https://www.solarsoft.io/contact" target="_blank" rel="noreferrer" >Partnerships</a>
             </li>
           </ul>
         </div>

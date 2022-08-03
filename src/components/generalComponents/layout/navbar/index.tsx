@@ -7,7 +7,7 @@ import styles from "./styles.module.css";
 
 export interface NavbarProps {
   type: "light" | "dark";
-  active: "home" | "support" | "about" | "media-kit";
+  active: "home" | "support" | "about" | "media-kit" | "";
 }
 
 const Navbar: React.FC<NavbarProps> = ({ type, active }) => {
