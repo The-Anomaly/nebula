@@ -15,6 +15,6 @@ export const Routes = {
   mediaKit: "/media-kit",
   terms: "/terms-of-service",
   privacy: "/privacy",
-  wallet: "/wallet/:id",
-  walletID: (id) => `/wallet/${id}`,
+  cluster: "/cluster/:id",
+  clusterID: (id) => `/cluster/${id}`,
 };

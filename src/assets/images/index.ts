@@ -11,6 +11,7 @@ import logoMark from "./logoMark.png";
 import logoType from "./logoType.png";
 import mainLogo from "./mainLogo.png";
 import verticalLogo from "./verticalLogo.png";
+import cluster from "./cluster.png";
 
 export {
   phone1,
@@ -26,4 +27,5 @@ export {
   verticalLogo,
   mainLogo,
   logoType,
+  cluster,
 };

@@ -1,5 +1,5 @@
 import { Layout, LayoutProps } from "components";
-import { About, Home, MediaKit, Privacy, Support, Terms } from "pages";
+import { About, Cluster, Home, MediaKit, Privacy, Support, Terms } from "pages";
 import { RouteProps } from "react-router-dom";
 import { Routes } from "./routes";
 
@@ -57,6 +57,12 @@ export const RouteBuilder: RouteBuilderItem[] = [
   {
     path: Routes.terms,
     Element: Terms,
+    Layout: Layout,
+    props: { type: "dark", active: "" },
+  },
+  {
+    path: Routes.cluster,
+    Element: Cluster,
     Layout: Layout,
     props: { type: "dark", active: "" },
   },
