@@ -3,11 +3,11 @@ import { Features } from "./features";
 import { HeroSection } from "./hero";
 import { MoreFeatures } from "./moreFeatures";
 import { NebAddresses } from "./neb";
-import { Waitlist } from "./waitlist";
+import { Waitlist, WaitlistProps } from "./waitlist";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const HomeUI = () => {
+const HomeUI: React.FC<WaitlistProps> = ({ submitWaitlist, reset }) => {
   React.useEffect((): any => {
     AOS.init({
       duration: 1500,
@@ -22,7 +22,7 @@ const HomeUI = () => {
       <Features />
       <MoreFeatures />
       <NebAddresses />
-      <Waitlist />
+      <Waitlist reset={reset} submitWaitlist={submitWaitlist} />
     </>
   );
 };

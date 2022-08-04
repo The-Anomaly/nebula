@@ -2,7 +2,18 @@ import { Button } from "components/generalComponents";
 import * as React from "react";
 import styles from "./styles.module.css";
 
-const Waitlist = () => {
+export interface WaitlistProps {
+  submitWaitlist: (email: string) => void;
+  reset: boolean;
+}
+
+const Waitlist: React.FC<WaitlistProps> = ({ submitWaitlist, reset }) => {
+  const [email, setEmail] = React.useState("");
+
+  React.useEffect(() => {
+    setEmail("");
+  }, [reset]);
+
   return (
     <section className={styles.waitlistBg}>
       <div className={`siteWrapper ${styles.waitlist}`}>
@@ -16,8 +27,14 @@ const Waitlist = () => {
             className={styles.input}
             type="email"
             placeholder="Enter your email address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
-          <Button type="dark" onClick={() => {}} className={styles.btn}>
+          <Button
+            type="dark"
+            onClick={() => email && submitWaitlist(email)}
+            className={styles.btn}
+          >
             SUBMIT
           </Button>
         </form>

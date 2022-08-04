@@ -2,6 +2,17 @@ import { cluster, EthIcon, nft1 } from "assets";
 import * as React from "react";
 import styles from "./styles.module.css";
 
+interface ClusterProps {
+  gallery: string[];
+  name: string;
+  creator: string;
+  thumbnail: string;
+  description: string;
+  estimatedValue: string;
+  chains: string[];
+  collectibles: string;
+}
+
 const ClusterUI = () => {
   const [view, setView] = React.useState(0);
   return (
