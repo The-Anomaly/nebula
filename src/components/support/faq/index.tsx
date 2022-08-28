@@ -56,8 +56,15 @@ const Faq: React.FC<FAQProp> = ({ faqs, search }) => {
 
   const scrollToCategory = (id) => {
     const element = document.getElementById(id);
+
     if (element) {
-      element.scrollIntoView();
+      const pos = element.style.position;
+      const top = element.style.top;
+      element.style.position = 'relative';
+      element.style.top = '-100px';
+      element.scrollIntoView({behavior: 'smooth', block: 'start'});
+      element.style.top = top;
+      element.style.position = pos;
     }
   };
 
@@ -121,7 +128,7 @@ const Faq: React.FC<FAQProp> = ({ faqs, search }) => {
                   ))}
                 </div>
               ) : (
-                <div className={styles.noResults} >
+                <div className={styles.noResults}>
                   <p>There are no results for this search</p>
                 </div>
               )}

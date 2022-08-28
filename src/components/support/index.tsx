@@ -259,7 +259,7 @@ const SupportUI = () => {
         {
           question: "How do I swap tokens on Nebula?",
           answer:
-            "All you have to do is click the swap button on the app. Below are some images to help you out.",
+            "All you have to do is click the swap button on the app.",
         },
         {
           question: "Why did my swap fail?",

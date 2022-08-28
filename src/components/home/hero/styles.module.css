@@ -8,7 +8,7 @@
   align-items: center;
   position: relative;
   padding-top: 7rem;
-  padding-bottom: 400px;
+  padding-bottom: 450px;
 }
 .heroTtl {
   font-size: 90px;
@@ -47,10 +47,10 @@ button.playBtn {
   left: 26%;
   width: 60%;
   max-width: 474px;
-  animation-name: translateImg1;
+  /* animation-name: translateImg1;
   animation-duration: 6s;
   animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
 }
 .heroImg2 {
   position: absolute;
@@ -66,13 +66,13 @@ button.playBtn {
 
 @keyframes translateImg1 {
   0% {
-    transform: translateY(-100px);
+    transform: translateY(-30px);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(0);
   }
   100% {
-    transform: translateY(-100px);
+    transform: translateY(-30px);
   }
 }
 
@@ -164,13 +164,13 @@ button.playBtn {
   }
   @keyframes translateImg1 {
     0% {
-      transform: translateY(-30px);
+      transform: translateY(-20px);
     }
     50% {
-      transform: translateY(60px);
+      transform: translateY(0);
     }
     100% {
-      transform: translateY(-30px);
+      transform: translateY(-20px);
     }
   }
 }

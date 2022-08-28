@@ -25,6 +25,7 @@ const FeatureCard: React.FC<FeatureProps> = ({ Icon, title, text }) => {
 };
 
 const Features = () => {
+  const contentEl = React.useRef<HTMLDivElement>(null);
   const features: FeatureProps[] = [
     {
       Icon: KeyIcon,
@@ -42,9 +43,14 @@ const Features = () => {
       text: "Protect your assets with ease and experience the security you expect",
     },
   ];
+
+  React.useEffect(() => {
+    localStorage.setItem("pos", `${contentEl.current?.offsetTop}`);
+  }, []);
+
   return (
     <>
-      <section className={styles.featuresBg}>
+      <section ref={contentEl} className={styles.featuresBg}>
         <div className={`siteWrapper ${styles.features}`}>
           <h2 className={styles.featuresTtl}>
             The first <span>NFT-focused</span> wallet

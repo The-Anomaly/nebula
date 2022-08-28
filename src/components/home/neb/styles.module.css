@@ -34,6 +34,7 @@
   font-weight: 500;
   letter-spacing: -0.5px;
   position: absolute;
+  transition: 0.6s;
 }
 .large {
   transform: scale(1.25);
@@ -49,48 +50,155 @@
 .neb1 {
   top: 0;
   left: 10%;
+  animation: scale1 6s ease-in-out 0s infinite forwards;
 }
 .neb2 {
   top: 20px;
   right: 35%;
+  animation: scale2 6s ease-in-out 0s infinite forwards;
 }
 .neb3 {
   top: 0;
   right: 8%;
+  animation: scale3 6s ease-in-out 0s infinite forwards;
 }
 .neb4 {
   left: 0;
   top: 110px;
+  animation: scale2 6s ease-in-out 0s infinite forwards;
 }
 .neb5 {
   left: 35%;
   top: 150px;
+  animation: scale4 6s ease-in-out 0s infinite forwards;
 }
 .neb6 {
   right: 0;
   top: 110px;
+  animation: scale5 6s ease-in-out 0s infinite forwards;
 }
 .neb7 {
   left: 15%;
   top: 260px;
+  animation: scale6 6s ease-in-out 0s infinite forwards;
 }
 .neb8 {
   right: 10%;
   top: 260px;
+  animation: scale7 6s ease-in-out 0s infinite forwards;
 }
-.nebCard:hover {
-  transform: scale(1.2);
-  cursor: default;
-  transition: 0.5s;
+
+@keyframes scale1 {
+  0% {
+    transform: scale(1);
+  }
+  20%,
+  70% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-.large:hover {
-  transform: scale(1.4);
+
+@keyframes scale2 {
+  0% {
+    transform: scale(1.3);
+  }
+  20%,
+  70% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.3);
+  }
+}
+
+@keyframes scale3 {
+  0%,
+  40% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scale4 {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes scale5 {
+  0% {
+    transform: scale(1.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes scale6 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scale7 {
+  0% {
+    transform: scale(1.3);
+  }
+  30% {
+    transform: scale(1.3) translateX(-10px);
+  }
+  50% {
+    transform: scale(1) translateX(0);
+  }
+  100% {
+    transform: scale(1.3);
+  }
+}
+
+@keyframes largeScale {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
 }
 
 @media screen and (max-width: 800px) {
   .nebList {
     max-width: 550px;
     min-height: 400px;
+    width: 95%;
   }
   .nebCard {
     font-size: 16px;
@@ -116,21 +224,50 @@
 
 @media screen and (max-width: 550px) {
   .nebList {
-    transform: scale(calc(0.8 * 100vh));
+    min-height: 350px;
   }
   .nebCard {
     font-size: 14px;
     padding: 6px 16px;
   }
+  .neb1 {
+    top: -10px;
+  }
   .neb2 {
     right: 40%;
-    top: 30px;
+    top: 40px;
+  }
+  .neb4 {
+    top: 95px;
+  }
+  .neb6 {
+    top: 90px;
+    right: 10px;
   }
   .neb5 {
-    top: 130px;
+    top: 150px;
+  }
+  .neb7 {
+    left: 10%;
+    top: 200px;
+  }
+  .neb8  {
+    top: 210px;
+    right: 5%;
   }
   .ttl {
     font-size: 26px;
     margin-bottom: 5rem;
+  }
+  @keyframes scale5 {
+    0% {
+      transform: scale(1.3);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.3);
+    }
   }
 }

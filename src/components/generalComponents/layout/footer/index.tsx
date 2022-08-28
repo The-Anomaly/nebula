@@ -66,7 +66,7 @@ const Footer = () => {
           <p>Download</p>
           <ul>
             <li>
-              <a className={styles.diabledLink}>Andriod</a>
+              <a className={styles.diabledLink}>Android</a>
             </li>
             <li>
               <a className={styles.diabledLink}>IOS</a>

@@ -56,7 +56,7 @@ const MoreFeatures = () => {
             </div>
             <p className={styles.featureTtl}>Create & Send Clusters</p>
             <p className={styles.featureTxt}>
-              Create an send NFTs from various blockchains as a group— (we call
+              Create and send NFTs from various blockchains as a group— (we call
               them clusters) to anyone at a go.
             </p>
           </div>

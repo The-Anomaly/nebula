@@ -1,4 +1,9 @@
-import { LogoWithDarkText, LogoWithLightText, MenuClose, MenuOpen } from "assets";
+import {
+  LogoWithDarkText,
+  LogoWithLightText,
+  MenuClose,
+  MenuOpen,
+} from "assets";
 import { Button } from "components";
 import * as React from "react";
 import { Link } from "react-router-dom";
@@ -12,15 +17,31 @@ export interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ type, active }) => {
   const [showNav, setShowNav] = React.useState(false);
+  const [overrideType, setOverrideType] = React.useState("");
 
+  const handleScroll = () => {
+    if (
+      active == "home" &&
+      window.scrollY > Number(localStorage.getItem("pos"))
+    ) {
+      setOverrideType("dark");
+    } else {
+      setOverrideType(type);
+    }
+  };
+  window.addEventListener("scroll", handleScroll);
+
+  React.useEffect(() => {
+    setOverrideType(active === "home" ? "light" : "");
+  }, [active]);
   return (
     <header
-      className={`${styles.navBg} ${styles[type]} ${
-        showNav ? styles.openNav : ""
-      }`}
+      className={`${styles.navBg} ${
+        overrideType ? styles[overrideType] : styles[type]
+      } ${showNav ? styles.openNav : ""}`}
     >
       <nav className={`siteWrapper ${styles.nav}`}>
-        {type === "light" ? (
+        {type === "light" && overrideType === "light" ? (
           <Link to={Routes.home}>
             <LogoWithDarkText className={styles.logo} />
           </Link>
