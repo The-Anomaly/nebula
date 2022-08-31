@@ -1,29 +1,41 @@
-import { cluster, EthIcon, nft1 } from "assets";
+import { EthIcon, SolanaIcon } from "assets";
 import * as React from "react";
 import styles from "./styles.module.css";
 
-interface ClusterProps {
+export interface ClusterProps {
   gallery: string[];
   name: string;
   creator: string;
   thumbnail: string;
   description: string;
-  estimatedValue: string;
+  estimatedValue: number;
   chains: string[];
-  collectibles: string;
+  collectibles: {
+    eth: number;
+    sol: number;
+  };
 }
 
-const ClusterUI = () => {
+const ClusterUI: React.FC<ClusterProps> = ({
+  gallery,
+  name,
+  creator,
+  thumbnail,
+  description,
+  estimatedValue,
+  chains,
+  collectibles,
+}) => {
   const [view, setView] = React.useState(0);
   return (
     <div className={`siteWrapper ${styles.clusterWrap}`}>
       <div className={styles.cluster}>
         <div className={styles.clusterImg}>
-          <img src={cluster} alt="cluster thumbnail" />
+          <img src={thumbnail} alt="cluster thumbnail" />
         </div>
 
-        <h1 className={styles.name}>The Space Shuttle</h1>
-        <p className={styles.creator}>by @chilly.neb</p>
+        <h1 className={styles.name}>{name}</h1>
+        <p className={styles.creator}>by @{creator}</p>
         <div className={styles.btnSec}>
           <button
             className={view === 1 ? styles.active : ""}
@@ -40,31 +52,51 @@ const ClusterUI = () => {
         </div>
         {view === 0 ? (
           <div className={styles.gallery}>
-            <img src={nft1} alt="" />
-            <img src={nft1} alt="" />
-            <img src={nft1} alt="" />
-            <img src={nft1} alt="" />
-            <img src={nft1} alt="" />
-            <img src={nft1} alt="" />
-            <img src={nft1} alt="" />
-            <img src={nft1} alt="" />
-            <img src={nft1} alt="" />
+            {gallery.length > 0 &&
+              gallery.map((item, index) => (
+                <img key={index} src={item} alt="" />
+              ))}
           </div>
         ) : (
           <div className={styles.details}>
             <p className={styles.label}>DESCRIPTION</p>
-            <p className={styles.description}>
-              Do not go gentle into that good night, Old age should burn and
-              rage at close of day; Rage, rage against the dying of the light.
-            </p>
+            <p className={styles.description}>{description}</p>
             <p className={styles.label}>ESTIMATED VALUE</p>
-            <p className={styles.cost}>$567,092.73</p>
+            <p className={styles.cost}>
+              $
+              {Number(estimatedValue).toLocaleString("en", {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+              })}
+            </p>
             <p className={styles.label}>CHAINS</p>
             <div className={styles.chains}>
-              <EthIcon />
+              {chains.length > 0 &&
+                chains.map((item) =>
+                  item === "eth" ? (
+                    <EthIcon />
+                  ) : item === "sol" ? (
+                    <SolanaIcon />
+                  ) : (
+                    ""
+                  )
+                )}
             </div>
-            <p className={styles.label}>20 COLLECTIBLES</p>
-            <p className={styles.collectibles}>100%</p>
+            <p className={styles.label}>{gallery.length} COLLECTIBLES</p>
+            <p className={styles.collectibles}>
+              <span
+                className={styles.ethBg}
+                style={{ width: `${collectibles.eth}%` }}
+              >
+                {collectibles.eth}%
+              </span>
+              <span
+                className={styles.solBg}
+                style={{ width: `${collectibles.sol}%` }}
+              >
+                {collectibles.sol}%
+              </span>
+            </p>
           </div>
         )}
       </div>

@@ -28,6 +28,7 @@
   margin-bottom: 6px;
   font-size: 32px;
   font-weight: 500;
+  text-transform: capitalize;
 }
 .creator {
   text-align: center;
@@ -66,7 +67,7 @@ button.active {
 .gallery img {
   height: 100%;
   width: 100%;
-  aspect-ratio: 1/1;
+  /* aspect-ratio: 1/1; */
   border-radius: 12px;
 }
 .details {
@@ -95,19 +96,42 @@ button.active {
   display: flex;
   margin-bottom: 1rem;
 }
-.chains > * {
+.chains > svg {
   width: 22px;
+  margin-right: 10px;
 }
 .collectibles {
-  background: #617ee9;
-  padding: 1rem 1rem 1rem 1.8rem;
+  height: 60px;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 4px;
 }
-
+.collectibles span {
+  height: 100%;
+  display: inline-block;
+  padding-top: 1rem;
+}
+.ethBg {
+  background: #617ee9;
+  padding-left: 1rem;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+.solBg {
+  background: linear-gradient(249.51deg, #00ffa3 -47.16%, #dc1fff 140.55%);
+  padding-right: 1rem;
+  text-align: right;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
 @media screen and (max-width: 650px) {
   .gallery {
     gap: 1rem;
+  }
+  .name {
+    font-size: 26px;
+  }
+  .creator {
+    font-size: 14px;
   }
 }
