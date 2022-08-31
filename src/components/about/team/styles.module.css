@@ -29,7 +29,6 @@
 .member {
 }
 .img {
-  background: #d9d9d9;
   border-radius: 12px;
   width: 120px;
   height: 120px;
@@ -72,6 +71,13 @@
     margin-bottom: 1rem;
   }
   .txt {
+    font-size: 14px;
+  }
+  .name {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  .role {
     font-size: 14px;
   }
 }

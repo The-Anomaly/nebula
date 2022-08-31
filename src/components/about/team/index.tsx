@@ -1,3 +1,4 @@
+import { adeoti, amaku, anthony, dalu, ifere, moore, naomi } from "assets";
 import * as React from "react";
 import styles from "./styles.module.css";
 
@@ -22,49 +23,39 @@ const Member: React.FC<MemberProps> = ({ image, name, role }) => {
 const Team = () => {
   const teamMembers: MemberProps[] = [
     {
-      image: "",
+      image: ifere,
       name: "Ifere",
       role: "Engineer/CEO",
     },
     {
-      image: "",
+      image: moore,
       name: "Moore",
       role: "Engineer/CTO",
     },
     {
-      image: "",
+      image: amaku,
       name: "Amaku",
       role: "Blockchain Dev",
     },
     {
-      image: "",
+      image: adeoti,
       name: "Adeoti",
       role: "Designer",
     },
     {
-      image: "",
-      name: "Nachi",
-      role: "Project Manager",
-    },
-    {
-      image: "",
-      name: "Oyudo",
-      role: "Designer",
-    },
-    {
-      image: "",
-      name: "Anthony",
-      role: "Business Analyst",
-    },
-    {
-      image: "",
+      image: naomi,
       name: "Naomi",
       role: "Copywriter",
     },
     {
-      image: "",
+      image: dalu,
       name: "Dalu",
-      role: "Mobile Developer",
+      role: "Mobile Dev",
+    },
+    {
+      image: anthony,
+      name: "Anthony",
+      role: "Business Analyst",
     },
   ];
   return (

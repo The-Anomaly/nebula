@@ -12,6 +12,13 @@ import logoType from "./logoType.png";
 import mainLogo from "./mainLogo.png";
 import verticalLogo from "./verticalLogo.png";
 import cluster from "./cluster.png";
+import ifere from "./ifere.png";
+import moore from "./moore.png";
+import amaku from "./amaku.png";
+import adeoti from "./adeoti.png";
+import naomi from "./naomi.png";
+import dalu from "./dalu.png";
+import anthony from "./anthony.png";
 
 export {
   phone1,
@@ -28,4 +35,11 @@ export {
   mainLogo,
   logoType,
   cluster,
+  ifere,
+  adeoti,
+  amaku,
+  naomi,
+  dalu,
+  anthony,
+  moore,
 };

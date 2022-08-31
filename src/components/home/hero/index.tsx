@@ -13,9 +13,18 @@ const HeroSection = () => {
           </h1>
           <p className={styles.heroTxt}>
             Nebula is the best place to store, receive and send NFTs on the
-            Ethereum and Solana blockchains 
+            Ethereum and Solana blockchains
           </p>
-          <Button onClick={() => {}} type="dark" className={styles.playBtn}>
+          <Button
+            onClick={() =>
+              window.open(
+                "https://www.youtube.com/watch?v=X5Gyq5PrxXMhttps://www.youtube.com/watch?v=X5Gyq5PrxXM",
+                "_blank"
+              )
+            }
+            type="dark"
+            className={styles.playBtn}
+          >
             <PlayIcon /> Play Demo
           </Button>
           <img className={styles.heroImg1} src={phone1} alt="iphone" />
