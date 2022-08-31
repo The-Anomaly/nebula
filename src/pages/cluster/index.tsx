@@ -65,7 +65,7 @@ const Cluster = () => {
       {loading ? (
         <Preloader loading={loading} />
       ) : (
-        <ClusterUI {...clusterInfo} gallery={[nft1, nft2, nft3, ...clusterInfo.gallery, nft4, nft5, cluster, nft6]} />
+        <ClusterUI {...clusterInfo} />
       )}
     </>
   );
