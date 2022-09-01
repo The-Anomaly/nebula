@@ -2,7 +2,6 @@ import * as React from "react";
 import { ClusterProps, ClusterUI, Preloader } from "components";
 import { clusterURL, getRequest } from "api";
 import { useParams } from "react-router-dom";
-import { cluster, nft1, nft2, nft3, nft4, nft5, nft6 } from "assets";
 
 const Cluster = () => {
   const params = useParams();
@@ -38,7 +37,7 @@ const Cluster = () => {
         const cluster = {
           gallery: gallery,
           name: data.name,
-          creator: data.creatorHandle,
+          creator: data.nebAddress,
           thumbnail: data.imageUrl,
           description: data.description,
           estimatedValue: data.estValue,
@@ -49,7 +48,6 @@ const Cluster = () => {
           },
         };
 
-        console.log(cluster);
         setClusterInfo(cluster);
       })
       .catch((error) => {
