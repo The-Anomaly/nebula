@@ -54,3 +54,17 @@ button.btn {
   letter-spacing: 2px;
   width: 105px;
 }
+.twitterBtn.btn {
+  display: flex;
+  margin: auto;
+  border-radius: 7px;
+  font-size: 13px;
+  letter-spacing: normal;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 46px;
+}
+.twitterBtn svg {
+  margin-right: 10px;
+}

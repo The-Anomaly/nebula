@@ -1,3 +1,4 @@
+import { TwitterIcon } from "assets";
 import { Button, Toast, ToastProps } from "components/generalComponents";
 import * as React from "react";
 import styles from "./styles.module.css";
@@ -6,12 +7,14 @@ export interface WaitlistProps {
   submitWaitlist: (email: string) => void;
   reset: boolean;
   toast: ToastProps;
+  success: boolean;
 }
 
 const Waitlist: React.FC<WaitlistProps> = ({
   submitWaitlist,
   reset,
   toast,
+  success,
 }) => {
   const [email, setEmail] = React.useState("");
 
@@ -22,28 +25,46 @@ const Waitlist: React.FC<WaitlistProps> = ({
   return (
     <section className={styles.waitlistBg}>
       <div className={`siteWrapper ${styles.waitlist}`}>
-        <h4 className={styles.ttl}>Join the waitlist!</h4>
+        <h4 className={styles.ttl}>
+          {success ? "Awesome! You’re on the waitlist" : "Join the waitlist!"}
+        </h4>
         <p className={styles.txt}>
-          Be the first to be in the know. Join our growing waitlist to stay
-          upated on important information.
+          {success
+            ? <>Thank you! You will be the first to know when we are ready.<br /> If you’d like to follow up, join our Twitter.</>
+            : " Be the first to be in the know. Join our growing waitlist to stay upated on important information."}
         </p>
-        <form className={styles.form}>
-          <input
-            className={styles.input}
-            type="email"
-            placeholder="Enter your email address"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+        {success ? (
           <Button
             type="dark"
-            onClick={() => email && submitWaitlist(email)}
-            className={styles.btn}
+            onClick={() =>
+              window.open(
+                "https://twitter.com/walletnebula?s=21&t=8y6nK6Lug38PUeBOrFBzXg",
+                "_blank"
+              )
+            }
+            className={`${styles.btn} ${styles.twitterBtn}`}
           >
-            SUBMIT
+            <TwitterIcon /> Twitter
           </Button>
-        </form>
-        <Toast {...toast} />
+        ) : (
+          <form className={styles.form}>
+            <input
+              className={styles.input}
+              type="email"
+              placeholder="Enter your email address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <Button
+              type="dark"
+              onClick={() => email && submitWaitlist(email)}
+              className={styles.btn}
+            >
+              SUBMIT
+            </Button>
+          </form>
+        )}
+        {!success ? <Toast {...toast} /> : ""}
       </div>
     </section>
   );
