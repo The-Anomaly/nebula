@@ -1,8 +1,6 @@
-import { Layout } from "components";
 import { ErrorBoundary, ScrollToTop } from "helpers";
-import path from "path";
 import React from "react";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { RouteBuilder } from ".";
 
 /**

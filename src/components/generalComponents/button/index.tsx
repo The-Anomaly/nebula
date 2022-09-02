@@ -6,6 +6,7 @@ interface ButtonProps {
   type: "blue" | "dark";
   className?: string;
   onClick: () => void;
+  disabled?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -13,9 +14,11 @@ const Button: React.FC<ButtonProps> = ({
   type,
   className,
   onClick,
+  disabled,
 }) => {
   return (
     <button
+      disabled={disabled}
       onClick={(e) => {
         e.preventDefault();
         onClick();

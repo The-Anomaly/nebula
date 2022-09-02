@@ -12,6 +12,7 @@ const HomeUI: React.FC<WaitlistProps> = ({
   reset,
   toast,
   success,
+  loading,
 }) => {
   React.useEffect((): any => {
     AOS.init({
@@ -32,6 +33,7 @@ const HomeUI: React.FC<WaitlistProps> = ({
         submitWaitlist={submitWaitlist}
         toast={toast}
         success={success}
+        loading={loading}
       />
     </>
   );

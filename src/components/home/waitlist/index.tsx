@@ -1,4 +1,4 @@
-import { TwitterIcon } from "assets";
+import { Loader, TwitterIcon } from "assets";
 import { Button, Toast, ToastProps } from "components/generalComponents";
 import * as React from "react";
 import styles from "./styles.module.css";
@@ -8,6 +8,7 @@ export interface WaitlistProps {
   reset: boolean;
   toast: ToastProps;
   success: boolean;
+  loading: boolean;
 }
 
 const Waitlist: React.FC<WaitlistProps> = ({
@@ -15,6 +16,7 @@ const Waitlist: React.FC<WaitlistProps> = ({
   reset,
   toast,
   success,
+  loading,
 }) => {
   const [email, setEmail] = React.useState("");
 
@@ -29,9 +31,14 @@ const Waitlist: React.FC<WaitlistProps> = ({
           {success ? "Awesome! You’re on the waitlist" : "Join the waitlist!"}
         </h4>
         <p className={styles.txt}>
-          {success
-            ? <>Thank you! You will be the first to know when we are ready.<br /> If you’d like to follow up, join our Twitter.</>
-            : " Be the first to be in the know. Join our growing waitlist to stay upated on important information."}
+          {success ? (
+            <>
+              Thank you! You will be the first to know when we are ready.
+              <br /> If you’d like to follow up, join our Twitter.
+            </>
+          ) : (
+            " Be the first to be in the know. Join our growing waitlist to stay upated on important information."
+          )}
         </p>
         {success ? (
           <Button
@@ -54,13 +61,15 @@ const Waitlist: React.FC<WaitlistProps> = ({
               placeholder="Enter your email address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              readOnly={loading}
             />
             <Button
               type="dark"
               onClick={() => email && submitWaitlist(email)}
               className={styles.btn}
+              disabled={loading}
             >
-              SUBMIT
+              {loading ? <Loader className={styles.loader} /> : "SUBMIT"}
             </Button>
           </form>
         )}

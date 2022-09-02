@@ -87,9 +87,9 @@ const Navbar: React.FC<NavbarProps> = ({ type, active, cluster }) => {
               API DOCS
             </Button>
           </nav>
-          <nav className={`${styles.mobileNav} ${styles[type]}`}>
+          <nav className={`${styles.mobileNav} ${overrideType ? styles[overrideType] : styles[type]}`}>
             <div className={styles.header}>
-              {type === "light" ? (
+              {type === "light" && overrideType === "light" ? (
                 <Link to={Routes.home}>
                   <LogoWithDarkText className={styles.logo} />
                 </Link>

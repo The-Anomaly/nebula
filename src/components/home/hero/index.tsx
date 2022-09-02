@@ -4,6 +4,7 @@ import * as React from "react";
 import styles from "./styles.module.css";
 
 const HeroSection = () => {
+  const [showVid, setShowVid] = React.useState(false);
   return (
     <>
       <section className={styles.heroBg}>
@@ -16,12 +17,7 @@ const HeroSection = () => {
             Ethereum and Solana blockchains
           </p>
           <Button
-            onClick={() =>
-              window.open(
-                "https://www.youtube.com/watch?v=X5Gyq5PrxXMhttps://www.youtube.com/watch?v=X5Gyq5PrxXM",
-                "_blank"
-              )
-            }
+            onClick={() => setShowVid(true)}
             type="dark"
             className={styles.playBtn}
           >
@@ -31,6 +27,28 @@ const HeroSection = () => {
           <img className={styles.heroImg2} src={phone2} alt="iphone" />
         </div>
       </section>
+      <div
+        className={`${styles.youtubeVid} ${
+          showVid ? styles.show : styles.hide
+        }`}
+      >
+        <Button
+          onClick={() => setShowVid(false)}
+          type="dark"
+          className={styles.closeBtn}
+        >
+          Close
+        </Button>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/X5Gyq5PrxXM"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
     </>
   );
 };

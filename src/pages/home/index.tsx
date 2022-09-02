@@ -1,9 +1,9 @@
 import * as React from "react";
-import { HomeUI, Preloader, Toast } from "components";
+import { HomeUI } from "components";
 import { postRequest, waitListURL } from "api";
 
 const Home = () => {
-  const [loading, setLoading] = React.useState({ show: false, white: true });
+  const [loading, setLoading] = React.useState(false);
   const [reset, setReset] = React.useState(false);
   const [success, setSuccess] = React.useState(false);
   const [toast, setToast] = React.useState({
@@ -26,7 +26,7 @@ const Home = () => {
   };
 
   const submitWaitlist = (email) => {
-    setLoading({ show: true, white: false });
+    setLoading(true);
     postRequest(waitListURL(), { email })
       .then((response) => {
         if (response.status === 200) {
@@ -62,19 +62,18 @@ const Home = () => {
         });
       })
       .finally(() => {
-        setLoading({ show: false, white: false });
+        setLoading(false);
       });
   };
 
   return (
     <>
-      {/* <Toast {...toast} onHide={() => setToast({ ...toast, show: false })} /> */}
-      <Preloader loading={loading.show} white={loading.white} />
       <HomeUI
         submitWaitlist={validateEmail}
         reset={reset}
         toast={{ ...toast, onHide: () => setToast({ ...toast, show: false }) }}
         success={success}
+        loading={loading}
       />
     </>
   );

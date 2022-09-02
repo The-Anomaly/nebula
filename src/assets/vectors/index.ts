@@ -34,6 +34,7 @@ import verticalLogoSVG from "./logoVertical.svg";
 import { ReactComponent as CheckIcon } from "./check.svg";
 import { ReactComponent as ErrorIcon } from "./error.svg";
 import { ReactComponent as Thumbnail } from "./thumbnail.svg";
+import { ReactComponent as Loader } from "./loader.svg";
 
 export {
   LogoWithDarkText,
@@ -72,4 +73,5 @@ export {
   ErrorIcon,
   CheckIcon,
   Thumbnail,
+  Loader,
 };

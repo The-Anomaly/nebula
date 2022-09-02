@@ -17,9 +17,10 @@ const Layout: React.FC<LayoutProps> = ({
   noFooter = false,
   cluster = false,
 }) => {
-  const [loading, setLoading] = React.useState({ show: true, white: true });
+  const [loading, setLoading] = React.useState({ show: false, white: true });
 
   React.useEffect(() => {
+    setLoading({ show: true, white: true });
     setTimeout(() => {
       setLoading({ show: false, white: true });
     }, 3000);
