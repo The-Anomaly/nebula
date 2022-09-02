@@ -47,10 +47,10 @@ button.playBtn {
   left: 26%;
   width: 60%;
   max-width: 474px;
-  /* animation-name: translateImg1;
+  animation-name: translateImg1;
   animation-duration: 6s;
   animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite; */
+  animation-iteration-count: infinite;
 }
 .heroImg2 {
   position: absolute;

@@ -19,6 +19,7 @@ import adeoti from "./adeoti.png";
 import naomi from "./naomi.png";
 import dalu from "./dalu.png";
 import anthony from "./anthony.png";
+import oyudo from "./oyudo.png";
 
 export {
   phone1,
@@ -42,4 +43,5 @@ export {
   dalu,
   anthony,
   moore,
+  oyudo,
 };

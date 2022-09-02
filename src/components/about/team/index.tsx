@@ -1,4 +1,4 @@
-import { adeoti, amaku, anthony, dalu, ifere, moore, naomi } from "assets";
+import { adeoti, amaku, anthony, dalu, ifere, moore, naomi, oyudo } from "assets";
 import * as React from "react";
 import styles from "./styles.module.css";
 
@@ -43,6 +43,16 @@ const Team = () => {
       role: "Designer",
     },
     {
+      image: oyudo,
+      name: "Oyudo",
+      role: "Designer",
+    },
+    {
+      image: anthony,
+      name: "Anthony",
+      role: "Business Analyst",
+    },
+    {
       image: naomi,
       name: "Naomi",
       role: "Copywriter",
@@ -51,11 +61,6 @@ const Team = () => {
       image: dalu,
       name: "Dalu",
       role: "Mobile Dev",
-    },
-    {
-      image: anthony,
-      name: "Anthony",
-      role: "Business Analyst",
     },
   ];
   return (

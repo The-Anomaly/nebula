@@ -191,7 +191,7 @@ const Kit = () => {
               <div className={styles.blue}></div>
               <div>
                 <p className={styles.colorName}>Nebula Blue</p>
-                <p className={styles.colorCode}>#21A8F4</p>
+                <p className={styles.colorCode}>#18A0ED</p>
               </div>
             </div>
             <div className={styles.colorSec}>

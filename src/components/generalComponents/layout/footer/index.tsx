@@ -26,7 +26,7 @@ const Footer = () => {
             <a href="https://vm.tiktok.com/ZMN44rUNH/" target="_blank" rel="noreferrer" >
               <TiktokIcon />
             </a>
-            <a href="https://medium.com/@media_26466" target="_blank" rel="noreferrer" >
+            <a href="https://link.medium.com/wmscXkOFWsb" target="_blank" rel="noreferrer" >
               <MediumIcon />
             </a>
           </div>

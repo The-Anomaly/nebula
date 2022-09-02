@@ -12,6 +12,19 @@ const Home = () => {
     show: false,
   });
 
+  const validateEmail = (mail) => {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+      return submitWaitlist(mail);
+    }
+    setToast({
+      title: "Sorry",
+      text: "You have entered an invalid email address!",
+      type: false,
+      show: true,
+    });
+    return false;
+  };
+
   const submitWaitlist = (email) => {
     setLoading({ show: true, white: false });
     postRequest(waitListURL(), { email })
@@ -32,14 +45,20 @@ const Home = () => {
               show: false,
             });
           }, 3000);
+        } else {
+          setToast({
+            title: "Sorry",
+            text: "Failed to add to waitlist. Please try again later",
+            type: false,
+            show: true,
+          });
         }
       })
       .catch((error) => {
-        console.log(error);
         setToast({
           title: "Sorry",
-          text: error.response.data.error,
-          type: error.response.data.success,
+          text: error?.response?.data?.error ?? error.message,
+          type: false,
           show: true,
         });
       })
@@ -52,7 +71,7 @@ const Home = () => {
     <>
       <Toast {...toast} onHide={() => setToast({ ...toast, show: false })} />
       <Preloader loading={loading.show} white={loading.white} />
-      <HomeUI submitWaitlist={submitWaitlist} reset={reset} />
+      <HomeUI submitWaitlist={validateEmail} reset={reset} />
     </>
   );
 };
