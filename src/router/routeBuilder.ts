@@ -64,6 +64,6 @@ export const RouteBuilder: RouteBuilderItem[] = [
     path: Routes.cluster,
     Element: Cluster,
     Layout: Layout,
-    props: { type: "dark", active: "" },
+    props: { type: "dark", active: "", cluster: true, noFooter: true },
   },
 ];

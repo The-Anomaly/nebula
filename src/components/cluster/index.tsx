@@ -1,6 +1,8 @@
-import { EthIcon, SolanaIcon } from "assets";
+import { EthIcon, Logo, LogoType, SolanaIcon } from "assets";
 import * as React from "react";
 import styles from "./styles.module.css";
+import thumbnail from "assets/vectors/thumbnail.svg";
+import { Button } from "components/generalComponents";
 
 export interface ClusterProps {
   gallery: string[];
@@ -20,18 +22,64 @@ const ClusterUI: React.FC<ClusterProps> = ({
   gallery,
   name,
   creator,
-  thumbnail,
   description,
   estimatedValue,
   chains,
   collectibles,
 }) => {
   const [view, setView] = React.useState(0);
+  const [showPrompt, setShowPrompt] = React.useState(true);
+  const [thumbnailGroup, setThumbnailGroup] = React.useState<string[]>([]);
+
+  React.useEffect(() => {
+    let data: string[] = [];
+    if (gallery.length === 1) {
+      data = gallery;
+    } else if (gallery.length < 4) {
+      data = gallery;
+      let n = 4 - gallery.length;
+      while (n) {
+        data.push(thumbnail);
+        n--;
+      }
+    } else if (gallery.length === 5) {
+      data = [...gallery];
+      data.pop();
+    } else if (gallery.length > 6 && gallery.length < 13) {
+      data = gallery.slice(0, 6);
+    } else {
+      data = gallery.slice(0, 13);
+    }
+    setThumbnailGroup(data);
+  }, [gallery.length]);
+
   return (
     <div className={`siteWrapper ${styles.clusterWrap}`}>
       <div className={styles.cluster}>
-        <div className={styles.clusterImg}>
-          <img src={thumbnail} alt="cluster thumbnail" />
+        <div
+          className={`${styles.clusterImg} ${
+            thumbnailGroup.length == 1
+              ? styles.one
+              : thumbnailGroup.length <= 4
+              ? styles.four
+              : thumbnailGroup.length === 6
+              ? styles.six
+              : thumbnailGroup.length === 13
+              ? styles.thirteen
+              : ""
+          }`}
+        >
+          {thumbnailGroup.length > 0 &&
+            thumbnailGroup.map((item, index) => (
+              <img
+                key={index}
+                src={item}
+                alt=""
+                onError={({ currentTarget }) => {
+                  currentTarget.outerHTML = `<video controls="" autoplay="true" name="media"><source src="${item}" type="video/mp4"></video>`;
+                }}
+              />
+            ))}
         </div>
 
         <h1 className={styles.name}>{name}</h1>
@@ -54,7 +102,14 @@ const ClusterUI: React.FC<ClusterProps> = ({
           <div className={styles.gallery}>
             {gallery.length > 0 &&
               gallery.map((item, index) => (
-                <img key={index} src={item} alt="" />
+                <img
+                  key={index}
+                  src={item}
+                  alt=""
+                  onError={({ currentTarget }) => {
+                    currentTarget.outerHTML = `<video controls="" autoplay="true" name="media"><source src="${item}" type="video/mp4"></video>`;
+                  }}
+                />
               ))}
           </div>
         ) : (
@@ -100,6 +155,25 @@ const ClusterUI: React.FC<ClusterProps> = ({
           </div>
         )}
       </div>
+      {showPrompt ? (
+        <div className={styles.downloadPrompt}>
+          <Logo className={styles.logo} />
+          <div className={styles.txtWrap}>
+            <p>Nebula Wallet</p>
+            <p>The official app</p>
+          </div>
+          <div className={styles.btnWrap}>
+            <Button type={"blue"} onClick={() => {}}>
+              Download
+            </Button>
+            <Button type={"dark"} onClick={() => setShowPrompt(false)}>
+              Dismiss
+            </Button>
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

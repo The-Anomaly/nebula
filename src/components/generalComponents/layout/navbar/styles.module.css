@@ -51,6 +51,13 @@
   .nav {
     display: none;
   }
+  .clusterMobile {
+    display: flex;
+  }
+  .clusterMobile button {
+    padding: 10px 1.5rem;
+    border-radius: 6px;
+  }
   .mobileNav {
     display: block;
   }

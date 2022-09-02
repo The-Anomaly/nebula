@@ -6,9 +6,17 @@ import styles from "./styles.module.css";
 
 export interface LayoutProps extends NavbarProps {
   [key: string]: any;
+  noFooter?: boolean;
+  cluster?: boolean;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children, type, active }) => {
+const Layout: React.FC<LayoutProps> = ({
+  children,
+  type,
+  active,
+  noFooter = false,
+  cluster = false,
+}) => {
   const [loading, setLoading] = React.useState({ show: true, white: true });
 
   React.useEffect(() => {
@@ -20,9 +28,9 @@ const Layout: React.FC<LayoutProps> = ({ children, type, active }) => {
   return (
     <>
       <Preloader loading={loading.show} white={loading.white} />
-      <Navbar type={type} active={active} />
+      <Navbar type={type} active={active} cluster={cluster} />
       <main className={styles.wrapper}>{children}</main>
-      <Footer />
+      {!noFooter ? <Footer /> : ""}
     </>
   );
 };

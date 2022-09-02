@@ -33,6 +33,7 @@ import mainLogoSVG from "./logoWithLightText.svg";
 import verticalLogoSVG from "./logoVertical.svg";
 import { ReactComponent as CheckIcon } from "./check.svg";
 import { ReactComponent as ErrorIcon } from "./error.svg";
+import { ReactComponent as Thumbnail } from "./thumbnail.svg";
 
 export {
   LogoWithDarkText,
@@ -70,4 +71,5 @@ export {
   logoTypeSVG,
   ErrorIcon,
   CheckIcon,
+  Thumbnail,
 };

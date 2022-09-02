@@ -2,6 +2,7 @@ import * as React from "react";
 import { ClusterProps, ClusterUI, Preloader } from "components";
 import { clusterURL, getRequest } from "api";
 import { useParams } from "react-router-dom";
+import { nft1, nft2, nft3, nft4, nft5, nft6 } from "assets";
 
 const Cluster = () => {
   const params = useParams();
@@ -27,7 +28,14 @@ const Cluster = () => {
         console.log(response);
         const data = response.data.data;
 
-        const gallery: string[] = data.nfts.map((item) => item.imageUrl);
+        const gallery: string[] = data.nfts.map((item) =>
+          /ipfs:\/\//.test(item.imageUrl)
+            ? item.imageUrl
+                .toString()
+                .replace("ipfs://", "https://ipfs.io/ipfs/")
+            : item.imageUrl
+        );
+
         const chainsIDs: string[] = data.nfts.map((item) => item.chain.chainID);
         const ethChains =
           chainsIDs.filter((item) => item === "eth").length / chainsIDs.length;
