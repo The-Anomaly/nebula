@@ -34,7 +34,7 @@ const Team = () => {
     },
     {
       image: amaku,
-      name: "Amaku",
+      name: "David",
       role: "Blockchain Dev",
     },
     {
@@ -69,7 +69,7 @@ const Team = () => {
         <h2 className={styles.ttl}>The Team</h2>
         <p className={styles.txt}>
           Our team is made up of a talented pool of engineers, designers,
-          entrepreneurs and artists working tiredlessly together on the single
+          entrepreneurs and artists working tirelessly together on the single
           mission to make managing your digital assets easy while bringing the
           best experience
         </p>
