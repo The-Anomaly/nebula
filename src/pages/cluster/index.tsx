@@ -2,7 +2,6 @@ import * as React from "react";
 import { ClusterProps, ClusterUI, Preloader } from "components";
 import { clusterURL, getRequest } from "api";
 import { useParams } from "react-router-dom";
-import { nft1, nft2, nft3, nft4, nft5, nft6 } from "assets";
 
 const Cluster = () => {
   const params = useParams();

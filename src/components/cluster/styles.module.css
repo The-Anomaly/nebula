@@ -167,6 +167,7 @@ button.active {
   position: fixed;
   bottom: 1rem;
   width: calc(100vw - 2rem);
+  display: none;
 }
 .logo {
   border-radius: 8px;
@@ -202,6 +203,17 @@ button.active {
 .btnWrap button:nth-child(2) {
   background: transparent;
   color: #5f6b7c;
+}
+@media screen and (max-width: 800px) {
+  .downloadPrompt {
+    width: calc(100vw - 4rem);
+    display: flex;
+  }
+}
+@media screen and (max-width: 600px) {
+  .downloadPrompt {
+    width: calc(100vw - 2rem);
+  }
 }
 @media screen and (max-width: 650px) {
   .gallery {

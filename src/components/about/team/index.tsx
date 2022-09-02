@@ -42,26 +42,26 @@ const Team = () => {
       name: "Adeoti",
       role: "Designer",
     },
-    {
-      image: oyudo,
-      name: "Oyudo",
-      role: "Designer",
-    },
-    {
-      image: anthony,
-      name: "Anthony",
-      role: "Business Analyst",
-    },
-    {
-      image: naomi,
-      name: "Naomi",
-      role: "Copywriter",
-    },
-    {
-      image: dalu,
-      name: "Dalu",
-      role: "Mobile Dev",
-    },
+    // {
+    //   image: oyudo,
+    //   name: "Oyudo",
+    //   role: "Designer",
+    // },
+    // {
+    //   image: anthony,
+    //   name: "Anthony",
+    //   role: "Business Analyst",
+    // },
+    // {
+    //   image: naomi,
+    //   name: "Naomi",
+    //   role: "Copywriter",
+    // },
+    // {
+    //   image: dalu,
+    //   name: "Dalu",
+    //   role: "Mobile Dev",
+    // },
   ];
   return (
     <section className={styles.teamBg}>
