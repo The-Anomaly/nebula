@@ -255,8 +255,9 @@ button.closeBtn {
     filter: blur(70px);
   }
   .heroBg::after {
-    width: 200px;
+    width: 100px;
     height: 200px;
+    right: 0;
     filter: blur(70px);
   }
   .youtubeVid {
