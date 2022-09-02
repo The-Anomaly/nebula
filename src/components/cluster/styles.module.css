@@ -204,6 +204,15 @@ button.active {
   background: transparent;
   color: #5f6b7c;
 }
+.show {
+  display: block;
+}
+.show.gallery {
+  display: grid;
+}
+.hide {
+  display: none;
+}
 @media screen and (max-width: 800px) {
   .downloadPrompt {
     width: calc(100vw - 4rem);

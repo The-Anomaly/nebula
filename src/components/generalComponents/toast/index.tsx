@@ -2,13 +2,13 @@ import { CheckIcon, ErrorIcon } from "assets";
 import * as React from "react";
 import styles from "./styles.module.css";
 
-interface ToastProps {
+export interface ToastProps {
   type: boolean;
-  title: string;
   text: string;
   show: boolean;
   onHide: () => void;
 }
+
 const useOutsideAlerter = (ref: any, closeFunction: () => any) => {
   React.useEffect(() => {
     /**
@@ -28,19 +28,25 @@ const useOutsideAlerter = (ref: any, closeFunction: () => any) => {
     };
   }, [ref, closeFunction]);
 };
-const Toast: React.FC<ToastProps> = ({ text, title, type, show, onHide }) => {
+const Toast: React.FC<ToastProps> = ({ text, type, show, onHide }) => {
   const listRef = React.useRef(null);
 
   useOutsideAlerter(listRef, onHide);
-
   return (
     <>
       {show ? (
-        <div className={styles.toastWrapper}>
-          <div ref={listRef} className={`${styles.toast} ${type ? styles.success : styles.failure}  `}>
-            {type ? <CheckIcon className={styles.icon} /> : <ErrorIcon className={styles.icon} />}
+        <div ref={listRef} className={styles.toastWrapper}>
+          <div
+            className={`${styles.toast} ${
+              type ? styles.success : styles.failure
+            }  `}
+          >
+            {type ? (
+              <CheckIcon className={styles.icon} />
+            ) : (
+              <ErrorIcon className={styles.icon} />
+            )}
             <div className={styles.txtSec}>
-              <h5>{title}</h5>
               <p>{text}</p>
             </div>
           </div>

@@ -7,7 +7,7 @@ import { Waitlist, WaitlistProps } from "./waitlist";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const HomeUI: React.FC<WaitlistProps> = ({ submitWaitlist, reset }) => {
+const HomeUI: React.FC<WaitlistProps> = ({ submitWaitlist, reset, toast }) => {
   React.useEffect((): any => {
     AOS.init({
       duration: 1500,
@@ -22,7 +22,7 @@ const HomeUI: React.FC<WaitlistProps> = ({ submitWaitlist, reset }) => {
       <Features />
       <MoreFeatures />
       <NebAddresses />
-      <Waitlist reset={reset} submitWaitlist={submitWaitlist} />
+      <Waitlist reset={reset} submitWaitlist={submitWaitlist} toast={toast} />
     </>
   );
 };

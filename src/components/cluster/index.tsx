@@ -76,7 +76,7 @@ const ClusterUI: React.FC<ClusterProps> = ({
                 src={item}
                 alt=""
                 onError={({ currentTarget }) => {
-                  currentTarget.outerHTML = `<video controls="" autoplay="true" name="media"><source src="${item}" type="video/mp4"></video>`;
+                  currentTarget.outerHTML = `<video muted="" loop="" controls="" autoplay="" name="media"><source src="${item}" type="video/mp4"></video>`;
                 }}
               />
             ))}
@@ -98,62 +98,67 @@ const ClusterUI: React.FC<ClusterProps> = ({
             Gallery
           </button>
         </div>
-        {view === 0 ? (
-          <div className={styles.gallery}>
-            {gallery.length > 0 &&
-              gallery.map((item, index) => (
-                <img
-                  key={index}
-                  src={item}
-                  alt=""
-                  onError={({ currentTarget }) => {
-                    currentTarget.outerHTML = `<video controls="" autoplay="true" name="media"><source src="${item}" type="video/mp4"></video>`;
-                  }}
-                />
-              ))}
+        <div
+          className={`${styles.gallery} ${
+            view === 0 ? styles.show : styles.hide
+          }`}
+        >
+          {gallery.length > 0 &&
+            gallery.map((item, index) => (
+              <img
+                key={index}
+                src={item}
+                alt=""
+                onError={({ currentTarget }) => {
+                  currentTarget.outerHTML = `<video muted="" loop="" controls="" autoplay="" name="media"><source src="${item}" type="video/mp4"></video>`;
+                }}
+              />
+            ))}
+        </div>
+        <div
+          className={`${styles.details} ${
+            view === 1 ? styles.show : styles.hide
+          }`}
+        >
+          <p className={styles.label}>DESCRIPTION</p>
+          <p className={styles.description}>{description}</p>
+          <p className={styles.label}>ESTIMATED VALUE</p>
+          <p className={styles.cost}>
+            $
+            {Number(estimatedValue).toLocaleString("en", {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })}
+          </p>
+          <p className={styles.label}>CHAINS</p>
+          <div className={styles.chains}>
+            {chains.length > 0 &&
+              chains.map((item) =>
+                item === "eth" ? (
+                  <EthIcon />
+                ) : item === "sol" ? (
+                  <SolanaIcon />
+                ) : (
+                  ""
+                )
+              )}
           </div>
-        ) : (
-          <div className={styles.details}>
-            <p className={styles.label}>DESCRIPTION</p>
-            <p className={styles.description}>{description}</p>
-            <p className={styles.label}>ESTIMATED VALUE</p>
-            <p className={styles.cost}>
-              $
-              {Number(estimatedValue).toLocaleString("en", {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })}
-            </p>
-            <p className={styles.label}>CHAINS</p>
-            <div className={styles.chains}>
-              {chains.length > 0 &&
-                chains.map((item) =>
-                  item === "eth" ? (
-                    <EthIcon />
-                  ) : item === "sol" ? (
-                    <SolanaIcon />
-                  ) : (
-                    ""
-                  )
-                )}
-            </div>
-            <p className={styles.label}>{gallery.length} COLLECTIBLES</p>
-            <p className={styles.collectibles}>
-              <span
-                className={styles.ethBg}
-                style={{ width: `${collectibles.eth}%` }}
-              >
-                {collectibles.eth}%
-              </span>
-              <span
-                className={styles.solBg}
-                style={{ width: `${collectibles.sol}%` }}
-              >
-                {collectibles.sol}%
-              </span>
-            </p>
-          </div>
-        )}
+          <p className={styles.label}>{gallery.length} COLLECTIBLES</p>
+          <p className={styles.collectibles}>
+            <span
+              className={styles.ethBg}
+              style={{ width: `${collectibles.eth}%` }}
+            >
+              {collectibles.eth}%
+            </span>
+            <span
+              className={styles.solBg}
+              style={{ width: `${collectibles.sol}%` }}
+            >
+              {collectibles.sol}%
+            </span>
+          </p>
+        </div>
       </div>
       {showPrompt ? (
         <div className={styles.downloadPrompt}>

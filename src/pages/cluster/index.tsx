@@ -24,7 +24,6 @@ const Cluster = () => {
     setLoading(true);
     getRequest(clusterURL(params.id))
       .then((response) => {
-        console.log(response);
         const data = response.data.data;
 
         const gallery: string[] = data.nfts.map((item) =>
@@ -58,7 +57,6 @@ const Cluster = () => {
         setClusterInfo(cluster);
       })
       .catch((error) => {
-        console.error(error);
       })
       .finally(() => {
         setLoading(false);

@@ -1,35 +1,33 @@
 .toastWrapper {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
+  width: 100%;
+  height: fit-content;
   display: flex;
   justify-content: center;
   background: transparent;
-  z-index: 3;
+  margin-top: 1rem;
 }
 .toast {
-  max-width: 350px;
-  min-width: 350px;
-  padding: 1rem;
-  border-radius: 4px;
+  max-width: 400px;
+  width: 100%;
+  padding: 12px 12px 12px 1rem;
+  border-radius: 8px;
   box-shadow: 0 0 10px rgb(0 0 0 / 15%);
   background: var(--white);
   color: var(--black);
   display: flex;
-  align-items: flex-start;
-  min-height: 80px;
+  align-items: center;
   height: fit-content;
-  animation: slideIn 1s cubic-bezier(0.5, 0.44, 0, 0.82);
+  animation: slideIn 0.5s ease-in-out;
   animation-fill-mode: forwards;
   position: relative;
 }
 
 @keyframes slideIn {
   0% {
-    top: -50vw;
+    opacity: 0;;
   }
   100% {
-    top: 50px;
+    opacity: 1;
   }
 }
 
@@ -49,19 +47,20 @@
 .success {
   background: #1d4b33;
 }
-.success h5 {
-  color: #2dc573;
-}
+
 .failure {
-  background: #351313;
-}
-.failure h5 {
-  color: #f45858;
+  background: #430D0B;
 }
 .txtSec p {
   color: var(--lightText);
-  font-size: 13px;
+  font-size: 14px;
   margin-bottom: 0;
   font-weight: 300;
   word-break: break-word;
+}
+.failure .txtSec p {
+  color: #FF5F5A;
+}
+.success .txtSec p {
+  color: #2dc573;
 }

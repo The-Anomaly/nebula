@@ -1,13 +1,18 @@
-import { Button } from "components/generalComponents";
+import { Button, Toast, ToastProps } from "components/generalComponents";
 import * as React from "react";
 import styles from "./styles.module.css";
 
 export interface WaitlistProps {
   submitWaitlist: (email: string) => void;
   reset: boolean;
+  toast: ToastProps;
 }
 
-const Waitlist: React.FC<WaitlistProps> = ({ submitWaitlist, reset }) => {
+const Waitlist: React.FC<WaitlistProps> = ({
+  submitWaitlist,
+  reset,
+  toast,
+}) => {
   const [email, setEmail] = React.useState("");
 
   React.useEffect(() => {
@@ -38,6 +43,7 @@ const Waitlist: React.FC<WaitlistProps> = ({ submitWaitlist, reset }) => {
             SUBMIT
           </Button>
         </form>
+        <Toast {...toast} />
       </div>
     </section>
   );
