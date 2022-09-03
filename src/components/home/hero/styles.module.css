@@ -132,7 +132,7 @@ button.playBtn {
   border-top-right-radius: 24px;
   flex-direction: column;
   -webkit-overflow-scrolling: touch;
-  overflow: scroll;
+  overflow: auto;
 }
 .youtubeVid iframe {
   object-fit: cover;

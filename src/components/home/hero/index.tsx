@@ -3,8 +3,36 @@ import { Button } from "components";
 import * as React from "react";
 import styles from "./styles.module.css";
 
+// /**
+//  * Determine the mobile operating system.
+//  * This function returns one of 'iOS', 'Android', 'Windows Phone', or 'unknown'.
+//  *
+//  * @returns {String}
+//  */
+//  function getMobileOperatingSystem() {
+//   var userAgent = navigator.userAgent || navigator.vendor;
+
+//   // Windows Phone must come first because its UA also contains "Android"
+//   if (/windows phone/i.test(userAgent)) {
+//       return "Windows Phone";
+//   }
+
+//   if (/android/i.test(userAgent)) {
+//       return "Android";
+//   }
+
+//   // iOS detection from: http://stackoverflow.com/a/9039885/177710
+//   if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+//       return "iOS";
+//   }
+
+//   return "unknown";
+// }
+
 const HeroSection = () => {
   const [showVid, setShowVid] = React.useState(false);
+
+  console.log(navigator.userAgent)
   return (
     <>
       <section className={styles.heroBg}>
@@ -14,7 +42,7 @@ const HeroSection = () => {
           </h1>
           <p className={styles.heroTxt}>
             Nebula is the best place to store, receive and send NFTs on the
-            Ethereum and Solana blockchains
+            Ethereum and Solana blockchains {navigator.userAgent}
           </p>
           <Button
             onClick={() => setShowVid(true)}
