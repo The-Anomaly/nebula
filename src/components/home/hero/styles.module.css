@@ -138,6 +138,8 @@ button.playBtn {
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
+  min-width: 100%;
+  *width: 100%;
 }
 button.closeBtn {
   margin-left: auto;
